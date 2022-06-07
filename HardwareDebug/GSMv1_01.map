@@ -1,0 +1,1054 @@
+Archive member included because of file (symbol)
+
+libGSMv1_01.a(_atoi.o)        ./src/GSM.o (atoi)
+libGSMv1_01.a(_memcpy.o)      ./src/GSM.o (memcpy)
+libGSMv1_01.a(_strcat.o)      ./src/GSM.o (strcat)
+libGSMv1_01.a(_strcmp.o)      ./src/GSM.o (strncmp)
+libGSMv1_01.a(_strcpy.o)      ./src/GSM.o (strcpy)
+libGSMv1_01.a(_strlen.o)      ./src/ADC.o (strlen)
+libGSMv1_01.a(sprintf.o)      ./src/ADC.o (sprintf)
+libGSMv1_01.a(frmwri.o)       libGSMv1_01.a(sprintf.o) (_formatted_write)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o)
+                              libGSMv1_01.a(frmwri.o) (__extendsfdf2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+                              libGSMv1_01.a(frmwri.o) (__subdf3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o)
+                              libGSMv1_01.a(frmwri.o) (__muldf3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_div_df.o)
+                              libGSMv1_01.a(frmwri.o) (__divdf3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o)
+                              libGSMv1_01.a(frmwri.o) (__nedf2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ge_df.o)
+                              libGSMv1_01.a(frmwri.o) (__gedf2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_lt_df.o)
+                              libGSMv1_01.a(frmwri.o) (__ltdf2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_le_df.o)
+                              libGSMv1_01.a(frmwri.o) (__ledf2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o)
+                              libGSMv1_01.a(frmwri.o) (__floatsidf)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_df_to_si.o)
+                              libGSMv1_01.a(frmwri.o) (__fixdfsi)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_make_df.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o) (__make_dp)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_thenan_df.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__thenan_df)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodhi.o)
+                              libGSMv1_01.a(frmwri.o) (__divmodhi4)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+                              libGSMv1_01.a(frmwri.o) (__udivsi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o) (__clzsi2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                              ./src/ADC.o (__fixunssfsi)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o) (_int_isinf)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(adddi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__adddi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(subdi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__subdi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negabssi2.o)
+                              libGSMv1_01.a(frmwri.o) (__negsi2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negdi2.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__negdi2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(abshi2.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__abshi2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(anddi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__anddi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(iordi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__iordi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(cmpdi2.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__ucmpdi2)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashrsi3.o)
+                              ./src/myString.o (__ashrsi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashldi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o) (__ashldi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(lshrdi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__lshrdi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhi3.o)
+                              libGSMv1_01.a(_atoi.o) (__mulhi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulsidi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o) (__umulsidi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(umulsi3_hp.o)
+                              ./src/myString.o (__umulsi3_highpart)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(muldi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o) (__muldi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(sdivdi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o) (__divdi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o) (__unpack_f)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_pack_df.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__pack_d)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_df.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o) (__unpack_d)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_fpcmp_parts_df.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o) (__fpcmp_parts_d)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashlsi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o) (__ashlsi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhisi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(muldi3.o) (__umulhisi3)
+C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(udivdi3.o)
+                              C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(sdivdi3.o) (__div64_intrn)
+
+Allocating common symbols
+Common symbol       size              file
+
+adcResult           0x2               ./src/ADC.o
+g_uart1_rx_length   0x2               ./src/r_cg_serial.o
+g_uart1_rx_count    0x2               ./src/r_cg_serial.o
+gprsTimer           0x2               ./src/GSM.o
+adcv                0x2               ./src/ADC.o
+gsmInfo             0x2c              ./src/GSM.o
+g_uart0_tx_count    0x2               ./src/r_cg_serial.o
+SMScontent          0xa0              ./src/GSM.o
+recBuff             0xfa              ./src/GSM.o
+days                0x2               ./src/RTC.o
+quality             0xa               ./src/GSM.o
+gsm                 0xa               ./src/r_main.o
+adcaIndex           0x1               ./src/ADC.o
+gp_uart1_rx_address
+                    0x2               ./src/r_cg_serial.o
+gp_uart0_rx_address
+                    0x2               ./src/r_cg_serial.o
+GPRSresult          0x28              ./src/GSM.o
+g_uart0_rx_count    0x2               ./src/r_cg_serial.o
+gsmTimer            0x2               ./src/GSM.o
+weeks               0x2               ./src/RTC.o
+uptime              0xe               ./src/RTC.o
+result              0xa               ./src/ADC.o
+minutes             0x2               ./src/RTC.o
+gp_uart1_tx_address
+                    0x2               ./src/r_cg_serial.o
+adca                0xa               ./src/ADC.o
+adc1                0x2               ./src/ADC.o
+adc                 0x6               ./src/ADC.o
+smsFlags            0x18              ./src/GSM.o
+gp_uart0_tx_address
+                    0x2               ./src/r_cg_serial.o
+procBuff            0xaa              ./src/GSM.o
+g_uart1_tx_count    0x2               ./src/r_cg_serial.o
+smsInfo             0x14e             ./src/GSM.o
+g_uart0_rx_length   0x2               ./src/r_cg_serial.o
+years               0x2               ./src/RTC.o
+hours               0x2               ./src/RTC.o
+seconds             0x2               ./src/RTC.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+VEC              0x00000000         0x00000004
+IVEC             0x00000004         0x000000bc
+OPT              0x000000c0         0x00000004
+SEC_ID           0x000000c4         0x0000000a
+OCDSTAD          0x000000ce         0x0000000a
+OCDROM           0x00007e00         0x00000200
+ROM              0x000000d8         0x00007d28
+MIRROR           0x000f2000         0x00005fff
+RAM              0x000ff700         0x000007ff
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.vec            0x00000000        0x4
+ *(.vec)
+ .vec           0x00000000        0x4 ./src/r_cg_vector_table.o
+                0x00000000                HardwareVectors
+
+.vects          0x00000004       0x7c
+ *(.vects)
+ .vects         0x00000004       0x7c ./src/r_cg_vector_table.o
+                0x00000004                Vectors
+
+.option_bytes   0x000000c0        0x4
+ *(.option_bytes)
+ .option_bytes  0x000000c0        0x4 ./src/r_cg_vector_table.o
+                0x000000c0                Option_Bytes
+
+.security_id    0x000000c4        0xa
+ *(.security_id)
+ .security_id   0x000000c4        0xa ./src/r_cg_vector_table.o
+                0x000000c4                Security_Id
+
+.lowtext        0x000000d8        0x0
+ *(.plt)
+ .plt           0x000000d8        0x0 ./src/ADC.o
+ *(.lowtext)
+                0x000000d8                . = ALIGN (0x2)
+
+.tors           0x000000d8        0x0
+                0x000000d8                __CTOR_LIST__ = .
+                0x000000d8                . = ALIGN (0x2)
+                0x000000d8                ___ctors = .
+ *(.ctors)
+                0x000000d8                ___ctors_end = .
+                0x000000d8                __CTOR_END__ = .
+                0x000000d8                __DTOR_LIST__ = .
+                0x000000d8                ___dtors = .
+ *(.dtors)
+                0x000000d8                ___dtors_end = .
+                0x000000d8                __DTOR_END__ = .
+                0x000000d8                _mdata = .
+
+.text           0x000000dc     0x71c4
+ *(.text)
+ .text          0x000000dc      0x2ef ./src/ADC.o
+                0x000000dc                ADC_Service
+                0x000002a6                GetADC
+                0x00000330                ADC_Ave
+ .text          0x000003cb     0x150a ./src/GSM.o
+                0x000003cb                pec_Update
+                0x00000432                GSM_Service
+                0x00000894                sendData
+                0x000008cc                tx0Done
+                0x000008d1                tx1Done
+                0x000008d6                sendByte
+                0x00000939                sendSMS
+                0x000009a6                recData
+                0x00000ada                procData
+                0x00000cf5                Error
+                0x00000d19                getSignal
+                0x00000d64                procSMS
+                0x00000dd7                caps
+                0x00000e27                buildInfo
+                0x0000107c                checkGPRS
+                0x000010c8                Context
+                0x00001142                Socket1
+                0x0000136f                GotSMS
+                0x00001439                OK
+                0x000014a2                GPRS_Send
+                0x000015a6                DataStatus
+                0x000016ad                DataDecrypt
+                0x0000181b                Getvalue
+                0x000018a9                recByte
+ .text          0x000018d5      0x13c ./src/RTC.o
+                0x000018d5                incSeconds
+                0x000019d0                getUptime
+ .text          0x00001a11      0x67b ./src/myString.o
+                0x00001a11                myStrSection
+                0x00001b17                myLongStr
+                0x00001deb                myStrLong
+ .text          0x0000208c      0x13c ./src/r_cg_adc.o
+                0x0000208c                R_ADC_Create
+                0x00002147                R_ADC_Start
+                0x0000216c                R_ADC_Stop
+                0x00002191                R_ADC_Set_OperationOn
+                0x0000219e                R_ADC_Set_OperationOff
+                0x000021ab                R_ADC_Get_Result
+ .text          0x000021c8       0x40 ./src/r_cg_adc_user.o
+                0x000021c8                r_adc_interrupt
+ .text          0x00002208       0x3d ./src/r_cg_cgc.o
+                0x00002208                R_CGC_Create
+ .text          0x00002245       0x14 ./src/r_cg_cgc_user.o
+                0x00002245                R_CGC_Get_ResetSource
+ .text          0x00002259       0x73 ./src/r_cg_port.o
+                0x00002259                R_PORT_Create
+ .text          0x000022cc        0x0 ./src/r_cg_port_user.o
+ .text          0x000022cc      0x62d ./src/r_cg_serial.o
+                0x000022cc                R_SAU0_Create
+                0x000022f3                R_UART0_Create
+                0x00002429                R_UART0_Start
+                0x00002499                R_UART0_Stop
+                0x000024ec                R_UART0_Send
+                0x00002563                R_UART1_Create
+                0x0000275d                R_UART1_Start
+                0x000027e5                R_UART1_Stop
+                0x00002850                R_UART1_Receive
+                0x00002882                R_UART1_Send
+ .text          0x000028f9      0x1b1 ./src/r_cg_serial_user.o
+                0x000028f9                r_uart0_interrupt_send
+                0x00002961                r_uart1_interrupt_receive
+                0x00002a3f                r_uart1_interrupt_send
+ .text          0x00002aaa      0x1ef ./src/r_cg_timer.o
+                0x00002aaa                R_TAU0_Create
+                0x00002c2d                R_TAU0_Channel0_Start
+                0x00002c63                R_TAU0_Channel0_Stop
+ .text          0x00002c99       0x10 ./src/r_cg_timer_user.o
+                0x00002c99                r_tau0_channel0_interrupt
+ .text          0x00002ca9        0xc ./src/r_cg_vector_table.o
+                0x00002ca9                R_Dummy
+ .text          0x00002cb5       0x36 ./src/r_hardware_setup.o
+                0x00002cb5                R_Systeminit
+                0x00002cda                HardwareSetup
+ .text          0x00002ceb       0xa7 ./src/r_main.o
+                0x00002ceb                main
+                0x00002d71                R_MAIN_UserInit
+                0x00002d85                service
+ .text          0x00002d92       0x60 ./src/r_reset_program.o
+                0x00002d94                PowerON_Reset
+ .text          0x00002df2        0x0 libGSMv1_01.a(_atoi.o)
+ .text          0x00002df2       0x1b libGSMv1_01.a(_memcpy.o)
+                0x00002df2                memcpy
+ .text          0x00002e0d       0x2a libGSMv1_01.a(_strcat.o)
+                0x00002e0d                strcat
+                0x00002e12                strncat
+ .text          0x00002e37       0x28 libGSMv1_01.a(_strcmp.o)
+                0x00002e37                strcoll
+                0x00002e37                strcmp
+                0x00002e3c                strncmp
+ .text          0x00002e5f       0x15 libGSMv1_01.a(_strcpy.o)
+                0x00002e5f                strcpy
+ .text          0x00002e74       0x10 libGSMv1_01.a(_strlen.o)
+                0x00002e74                strlen
+ .text          0x00002e84        0x0 libGSMv1_01.a(sprintf.o)
+ .text          0x00002e84        0x0 libGSMv1_01.a(frmwri.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_div_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ge_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_lt_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_le_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_df_to_si.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_make_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_thenan_df.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodhi.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(adddi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(subdi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negabssi2.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negdi2.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(abshi2.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(anddi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(iordi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(cmpdi2.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashrsi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashldi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(lshrdi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulsidi3.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(umulsi3_hp.o)
+ .text          0x00002e84        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(muldi3.o)
+ .text          0x00002e84       0x24 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(sdivdi3.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_pack_df.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_df.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_fpcmp_parts_df.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashlsi3.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhisi3.o)
+ .text          0x00002ea8        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(udivdi3.o)
+ *(.text.*)
+ .text.atoi     0x00002ea8       0x7b libGSMv1_01.a(_atoi.o)
+                0x00002ea8                atoi
+ .text.put_c_in_string
+                0x00002f23       0x16 libGSMv1_01.a(sprintf.o)
+ .text.sprintf  0x00002f39       0x2a libGSMv1_01.a(sprintf.o)
+                0x00002f39                sprintf
+ .text._formatted_write
+                0x00002f63      0xd70 libGSMv1_01.a(frmwri.o)
+                0x00002f63                _formatted_write
+ .text.__extendsfdf2
+                0x00003cd3       0xc1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o)
+                0x00003cd3                __extendsfdf2
+ .text._fpadd_parts
+                0x00003d94      0x763 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+ .text.__adddf3
+                0x000044f7       0xc0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+                0x000044f7                __adddf3
+ .text.__subdf3
+                0x000045b7       0xca C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+                0x000045b7                __subdf3
+ .text.__muldf3
+                0x00004681      0x9ba C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o)
+                0x00004681                __muldf3
+ .text.__divdf3
+                0x0000503b      0x462 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_div_df.o)
+                0x0000503b                __divdf3
+ .text.__nedf2  0x0000549d       0xa2 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o)
+                0x0000549d                __nedf2
+ .text.__gedf2  0x0000553f       0xa3 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ge_df.o)
+                0x0000553f                __gedf2
+ .text.__ltdf2  0x000055e2       0xa2 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_lt_df.o)
+                0x000055e2                __ltdf2
+ .text.__ledf2  0x00005684       0xa2 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_le_df.o)
+                0x00005684                __ledf2
+ .text.__floatsidf
+                0x00005726      0x11f C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o)
+                0x00005726                __floatsidf
+ .text.__fixdfsi
+                0x00005845       0xe0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_df_to_si.o)
+                0x00005845                __fixdfsi
+ .text.__make_dp
+                0x00005925       0x62 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_make_df.o)
+                0x00005925                __make_dp
+ .text.___udivmodhi4
+                0x00005987       0x1f C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodhi.o)
+                0x00005987                __udivmodhi4
+ .text.___divmodhi4
+                0x000059a6       0x2c C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodhi.o)
+                0x000059a6                __divmodhi4
+ .text.___udivsi3
+                0x000059d2       0x21 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+                0x000059d2                __udivsi3
+ .text.___umodsi3
+                0x000059f3       0x23 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+                0x000059f3                __umodsi3
+ .text.___divsi3
+                0x00005a16       0x49 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+                0x00005a16                __divsi3
+ .text.___modsi3
+                0x00005a5f       0x45 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+                0x00005a5f                __modsi3
+ .text.___clzhi2
+                0x00005aa4       0x16 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005aa4                __clzhi2
+                0x00005aa6                _clzhi2_internal
+ .text.___clzsi2
+                0x00005aba       0x14 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005aba                __clzsi2
+ .text.___ctzhi2
+                0x00005ace       0x16 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005ace                __ctzhi2
+                0x00005ad0                _ctzhi2_internal
+ .text.___ctzsi2
+                0x00005ae4       0x14 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005ae4                __ctzsi2
+ .text.___ffshi2
+                0x00005af8       0x16 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005af8                __ffshi2
+                0x00005afa                _ffshi2_internal
+ .text.___ffssi2
+                0x00005b0e       0x19 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b0e                __ffssi2
+ .text.___parityqi_internal
+                0x00005b27       0x17 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b27                __parityqi_internal
+ .text.___parityhi2
+                0x00005b3e        0x6 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b3e                __parityhi2
+ .text.___paritysi2
+                0x00005b44        0xd C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b44                __paritysi2
+ .text.___popcounthi2
+                0x00005b51        0x4 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b51                __popcounthi2
+ .text.___popcountsi2
+                0x00005b55        0x4 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b55                __popcountsi2
+ .text.___popcountqi_internal
+                0x00005b59       0x1e C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b59                __popcountqi_internal
+ .text.___clzdi2
+                0x00005b77       0x23 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b77                __clzdi2
+ .text.___ctzdi2
+                0x00005b9a       0x23 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005b9a                __ctzdi2
+ .text.___ffsdi2
+                0x00005bbd       0x26 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005bbd                __ffsdi2
+ .text.___popcountdi2
+                0x00005be3       0x25 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005be3                __popcountdi2
+ .text.___paritydi2
+                0x00005c08       0x27 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+                0x00005c08                __paritydi2
+ .text.___negsf2
+                0x00005c2f        0xb C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005c2f                __negsf2
+ .text.__int_isnan
+                0x00005c3a       0x20 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005c3a                _int_isnan
+ .text.__int_eithernan
+                0x00005c5a       0x15 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005c5a                _int_eithernan
+ .text.__int_iszero
+                0x00005c6f        0xa C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005c6f                _int_iszero
+ .text.__int_cmpsf
+                0x00005c79       0x50 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005c79                _int_cmpsf
+ .text.___cmpsf2
+                0x00005cc9       0x14 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005cc9                __cmpsf2
+ .text.___eqsf2
+                0x00005cdd        0xf C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005cdd                __nesf2
+                0x00005cdd                __lesf2
+                0x00005cdd                __eqsf2
+                0x00005cdd                __ltsf2
+                0x00005ce0                _int_cmp_common
+ .text.___gesf2
+                0x00005cec        0x5 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005cec                __gesf2
+                0x00005cec                __gtsf2
+ .text.___unordsf2
+                0x00005cf1        0xe C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005cf1                __unordsf2
+ .text.___fixsfsi
+                0x00005cff       0x48 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005cff                __fixsfsi
+ .text.___fixunssfsi
+                0x00005d47       0x69 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005d47                __fixunssfsi
+                0x00005d4d                _int_fixunssfsi
+ .text.___floatsisf
+                0x00005db0       0x77 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+                0x00005db0                __floatsisf
+                0x00005dd7                __floatunsisf
+                0x00005ddc                _int_floatunsisf
+ .text.__int_isinf
+                0x00005e27       0x17 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+                0x00005e27                _int_isinf
+ .text._int_unpack_sf
+                0x00005e3e       0x36 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+                0x00005e3e                int_unpack_sf
+ .text.__rl78_int_pack_a_r8
+                0x00005e74       0xa7 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+                0x00005e74                _rl78_int_pack_a_r8
+ .text.___mulsf3
+                0x00005f1b      0x12c C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+                0x00005f1b                __mulsf3
+ .text.___divsf3
+                0x00006047      0x160 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+                0x00006047                __divsf3
+ .text.___adddi3
+                0x000061a7       0x2d C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(adddi3.o)
+                0x000061a7                __adddi3
+ .text.___subdi3
+                0x000061d4       0x2d C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(subdi3.o)
+                0x000061d4                __subdi3
+ .text.___abssi2
+                0x00006201       0x12 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negabssi2.o)
+                0x00006201                __abssi2
+                0x00006205                __negsi2
+ .text.___negdi2
+                0x00006213       0x21 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negdi2.o)
+                0x00006213                __negdi2
+ .text.___abshi2
+                0x00006234        0x7 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(abshi2.o)
+                0x00006234                __abshi2
+ .text.___anddi3
+                0x0000623b       0x34 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(anddi3.o)
+                0x0000623b                __anddi3
+ .text.___iordi3
+                0x0000626f       0x34 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(iordi3.o)
+                0x0000626f                __iordi3
+ .text.___ucmpdi2
+                0x000062a3       0x45 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(cmpdi2.o)
+                0x000062a3                __ucmpdi2
+                0x000062d8                __cmpdi2
+ .text.___ashrsi3
+                0x000062e8       0x10 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashrsi3.o)
+                0x000062e8                __ashrsi3
+ .text.___ashldi3
+                0x000062f8       0x33 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashldi3.o)
+                0x000062f8                __ashldi3
+ .text.___lshrdi3
+                0x0000632b       0x3f C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(lshrdi3.o)
+                0x0000632b                __lshrdi3
+ .text.___mulhi3
+                0x0000636a        0xd C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhi3.o)
+                0x0000636a                __mulhi3
+ .text.___usmulsidi3
+                0x00006377       0xb3 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulsidi3.o)
+                0x00006377                __usmulsidi3
+                0x00006380                __mulsidi3
+                0x0000638c                __umulsidi3
+ .text.___umulsi3_highpart
+                0x0000642a       0x49 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(umulsi3_hp.o)
+                0x0000642a                __umulsi3_highpart
+ .text.___muldi3
+                0x00006473       0x8c C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(muldi3.o)
+                0x00006473                __muldi3
+ .text.___moddi3
+                0x000064ff       0x4f C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(sdivdi3.o)
+                0x000064ff                __moddi3
+                0x00006502                __divdi3
+ .text.__unpack_f
+                0x0000654e      0x138 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o)
+                0x0000654e                __unpack_f
+ .text.__pack_d
+                0x00006686      0x64f C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_pack_df.o)
+                0x00006686                __pack_d
+ .text.__unpack_d
+                0x00006cd5      0x2d7 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_df.o)
+                0x00006cd5                __unpack_d
+ .text.__fpcmp_parts_d
+                0x00006fac      0x172 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_fpcmp_parts_df.o)
+                0x00006fac                __fpcmp_parts_d
+ .text.___ashlsi3
+                0x0000711e        0xc C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashlsi3.o)
+                0x0000711e                __ashlsi3
+ .text.___mulhisi3
+                0x0000712a       0x16 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhisi3.o)
+                0x0000712a                __mulhisi3
+                0x00007130                __umulhisi3
+ .text.___usmulhisi3
+                0x00007140       0x14 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhisi3.o)
+                0x00007140                __usmulhisi3
+ .text.___umoddi3
+                0x00007154      0x14b C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(udivdi3.o)
+                0x00007154                __umoddi3
+                0x0000717a                __udivdi3
+                0x00007186                __div64_intrn
+                0x0000729f                etext = .
+                0x000072a0                . = ALIGN (0x2)
+ *fill*         0x0000729f        0x1 
+                0x00000000                PROVIDE (__rl78_abs__, 0x0)
+
+.init
+ *(.init)
+
+.fini
+ *(.fini)
+
+.got
+ *(.got)
+ *(.got.plt)
+
+.rodata         0x000072a0      0x71c
+                0x000072a0                . = ALIGN (0x2)
+ *(.rodata)
+ .rodata        0x000072a0        0x4 ./src/ADC.o
+ .rodata        0x000072a4      0x6ba ./src/GSM.o
+ .rodata        0x0000795e       0x10 ./src/myString.o
+                0x0000795e                hex
+ .rodata        0x0000796e        0xa ./src/r_main.o
+ .rodata        0x00007978       0x35 libGSMv1_01.a(frmwri.o)
+ *(.rodata.*)
+ *fill*         0x000079ad        0x1 
+ .rodata.__thenan_df
+                0x000079ae        0xe C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_thenan_df.o)
+                0x000079ae                __thenan_df
+                0x000079bc                _erodata = .
+
+.frodata
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.jcr            0x000079bc        0x0
+ *(.jcr)
+                0x000079bc                . = ALIGN (0x2)
+
+.data           0x000ff700        0x4 load address 0x000000d8
+                0x000ff700                . = ALIGN (0x2)
+                0x000ff700                _data = .
+ *(.data)
+ .data          0x000ff700        0x0 ./src/ADC.o
+ .data          0x000ff700        0x4 ./src/GSM.o
+                0x000ff700                gsmState
+                0x000ff702                restart
+ .data          0x000ff704        0x0 ./src/RTC.o
+ .data          0x000ff704        0x0 ./src/myString.o
+ .data          0x000ff704        0x0 ./src/r_cg_adc.o
+ .data          0x000ff704        0x0 ./src/r_cg_adc_user.o
+ .data          0x000ff704        0x0 ./src/r_cg_cgc.o
+ .data          0x000ff704        0x0 ./src/r_cg_cgc_user.o
+ .data          0x000ff704        0x0 ./src/r_cg_port.o
+ .data          0x000ff704        0x0 ./src/r_cg_port_user.o
+ .data          0x000ff704        0x0 ./src/r_cg_serial.o
+ .data          0x000ff704        0x0 ./src/r_cg_serial_user.o
+ .data          0x000ff704        0x0 ./src/r_cg_timer.o
+ .data          0x000ff704        0x0 ./src/r_cg_timer_user.o
+ .data          0x000ff704        0x0 ./src/r_cg_vector_table.o
+ .data          0x000ff704        0x0 ./src/r_hardware_setup.o
+ .data          0x000ff704        0x0 ./src/r_main.o
+ .data          0x000ff704        0x0 ./src/r_reset_program.o
+ .data          0x000ff704        0x0 libGSMv1_01.a(_atoi.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(_memcpy.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(_strcat.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(_strcmp.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(_strcpy.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(_strlen.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(sprintf.o)
+ .data          0x000ff704        0x0 libGSMv1_01.a(frmwri.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_div_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ge_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_lt_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_le_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_df_to_si.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_make_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_thenan_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodhi.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(adddi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(subdi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negabssi2.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negdi2.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(abshi2.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(anddi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(iordi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(cmpdi2.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashrsi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashldi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(lshrdi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulsidi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(umulsi3_hp.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(muldi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(sdivdi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_pack_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_fpcmp_parts_df.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashlsi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhisi3.o)
+ .data          0x000ff704        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(udivdi3.o)
+ *(.data.*)
+                0x000ff704                . = ALIGN (0x2)
+                0x000ff704                _edata = .
+                0x00000004                PROVIDE (__romdatacopysize, SIZEOF (.data))
+
+.bss            0x000ff704      0x47a load address 0x000000dc
+                0x000ff704                . = ALIGN (0x2)
+                0x000ff704                _bss = .
+ *(.bss)
+ .bss           0x000ff704        0x0 ./src/ADC.o
+ .bss           0x000ff704       0x10 ./src/GSM.o
+                0x000ff704                recBuffPointerWrite
+                0x000ff706                recBuffPointerRead
+                0x000ff708                procBuffpointer
+                0x000ff70a                intFlag0
+                0x000ff70c                intFlag1
+                0x000ff70e                errorTimer
+                0x000ff710                errorCounter
+                0x000ff712                restartTimer
+ .bss           0x000ff714        0x0 ./src/RTC.o
+ .bss           0x000ff714        0x0 ./src/myString.o
+ .bss           0x000ff714        0x0 ./src/r_cg_adc.o
+ .bss           0x000ff714        0x0 ./src/r_cg_adc_user.o
+ .bss           0x000ff714        0x0 ./src/r_cg_cgc.o
+ .bss           0x000ff714        0x0 ./src/r_cg_cgc_user.o
+ .bss           0x000ff714        0x0 ./src/r_cg_port.o
+ .bss           0x000ff714        0x0 ./src/r_cg_port_user.o
+ .bss           0x000ff714        0x0 ./src/r_cg_serial.o
+ .bss           0x000ff714        0x0 ./src/r_cg_serial_user.o
+ .bss           0x000ff714        0x0 ./src/r_cg_timer.o
+ .bss           0x000ff714        0x0 ./src/r_cg_timer_user.o
+ .bss           0x000ff714        0x0 ./src/r_cg_vector_table.o
+ .bss           0x000ff714        0x0 ./src/r_hardware_setup.o
+ .bss           0x000ff714        0x4 ./src/r_main.o
+                0x000ff714                timer
+                0x000ff716                tick
+ .bss           0x000ff718        0x0 ./src/r_reset_program.o
+ .bss           0x000ff718        0x0 libGSMv1_01.a(_atoi.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(_memcpy.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(_strcat.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(_strcmp.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(_strcpy.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(_strlen.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(sprintf.o)
+ .bss           0x000ff718        0x0 libGSMv1_01.a(frmwri.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_div_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ge_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_lt_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_le_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_df_to_si.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_make_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_thenan_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodhi.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(divmodsi.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(bit-count.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpbit-sf.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(fpmath-sf.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(adddi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(subdi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negabssi2.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(negdi2.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(abshi2.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(anddi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(iordi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(cmpdi2.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashrsi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashldi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(lshrdi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulsidi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(umulsi3_hp.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(muldi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(sdivdi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_pack_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_fpcmp_parts_df.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(ashlsi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(mulhisi3.o)
+ .bss           0x000ff718        0x0 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(udivdi3.o)
+ *(.bss.**)
+                0x000ff718                . = ALIGN (0x2)
+ *(COMMON)
+ COMMON         0x000ff718       0x22 ./src/ADC.o
+                0x000ff718                adcResult
+                0x000ff71a                adcv
+                0x000ff71c                adcaIndex
+                0x000ff71d                result
+                0x000ff728                adca
+                0x000ff732                adc1
+                0x000ff734                adc
+ COMMON         0x000ff73a      0x40c ./src/GSM.o
+                0x000ff73a                gprsTimer
+                0x000ff73c                gsmInfo
+                0x000ff768                SMScontent
+                0x000ff808                recBuff
+                0x000ff902                quality
+                0x000ff90c                GPRSresult
+                0x000ff934                gsmTimer
+                0x000ff936                smsFlags
+                0x000ff94e                procBuff
+                0x000ff9f8                smsInfo
+ COMMON         0x000ffb46       0x1a ./src/RTC.o
+                0x000ffb46                days
+                0x000ffb48                weeks
+                0x000ffb4a                uptime
+                0x000ffb58                minutes
+                0x000ffb5a                years
+                0x000ffb5c                hours
+                0x000ffb5e                seconds
+ COMMON         0x000ffb60       0x14 ./src/r_cg_serial.o
+                0x000ffb60                g_uart1_rx_length
+                0x000ffb62                g_uart1_rx_count
+                0x000ffb64                g_uart0_tx_count
+                0x000ffb66                gp_uart1_rx_address
+                0x000ffb68                gp_uart0_rx_address
+                0x000ffb6a                g_uart0_rx_count
+                0x000ffb6c                gp_uart1_tx_address
+                0x000ffb6e                gp_uart0_tx_address
+                0x000ffb70                g_uart1_tx_count
+                0x000ffb72                g_uart0_rx_length
+ COMMON         0x000ffb74        0xa ./src/r_main.o
+                0x000ffb74                gsm
+                0x000ffb7e                . = ALIGN (0x2)
+                0x000ffb7e                _ebss = .
+                0x000ffb7e                _end = .
+                0x00000064                PROVIDE (stack_size, 0x64)
+
+.stack          0x000ffedc        0x0
+                0x000ffedc                _stack = .
+                0x00000001                ASSERT ((_stack > (_end + stack_size)), Error: Too much data - no room left for the stack)
+LOAD ./src/ADC.o
+LOAD ./src/GSM.o
+LOAD ./src/RTC.o
+LOAD ./src/myString.o
+LOAD ./src/r_cg_adc.o
+LOAD ./src/r_cg_adc_user.o
+LOAD ./src/r_cg_cgc.o
+LOAD ./src/r_cg_cgc_user.o
+LOAD ./src/r_cg_port.o
+LOAD ./src/r_cg_port_user.o
+LOAD ./src/r_cg_serial.o
+LOAD ./src/r_cg_serial_user.o
+LOAD ./src/r_cg_timer.o
+LOAD ./src/r_cg_timer_user.o
+LOAD ./src/r_cg_vector_table.o
+LOAD ./src/r_hardware_setup.o
+LOAD ./src/r_main.o
+LOAD ./src/r_reset_program.o
+LOAD libGSMv1_01.a
+START GROUP
+LOAD C:\Users\Jeefo\e2_studio\workspace\GSMv1_01\HardwareDebug\libGSMv1_01.a
+LOAD C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a
+END GROUP
+OUTPUT(GSMv1_01.x elf32-rl78)
+
+.debug_frame    0x00000000      0x86c
+ .debug_frame   0x00000000       0x84 ./src/ADC.o
+ .debug_frame   0x00000084      0x240 ./src/GSM.o
+ .debug_frame   0x000002c4       0x3c ./src/RTC.o
+ .debug_frame   0x00000300       0x84 ./src/myString.o
+ .debug_frame   0x00000384       0x74 ./src/r_cg_adc.o
+ .debug_frame   0x000003f8       0x64 ./src/r_cg_adc_user.o
+ .debug_frame   0x0000045c       0x24 ./src/r_cg_cgc.o
+ .debug_frame   0x00000480       0x2c ./src/r_cg_cgc_user.o
+ .debug_frame   0x000004ac       0x24 ./src/r_cg_port.o
+ .debug_frame   0x000004d0       0xcc ./src/r_cg_serial.o
+ .debug_frame   0x0000059c      0x174 ./src/r_cg_serial_user.o
+ .debug_frame   0x00000710       0x44 ./src/r_cg_timer.o
+ .debug_frame   0x00000754       0x48 ./src/r_cg_timer_user.o
+ .debug_frame   0x0000079c       0x48 ./src/r_cg_vector_table.o
+ .debug_frame   0x000007e4       0x3c ./src/r_hardware_setup.o
+ .debug_frame   0x00000820       0x4c ./src/r_main.o
+
+.debug_info     0x00000000     0x2a73
+ .debug_info    0x00000000      0x20f ./src/ADC.o
+ .debug_info    0x0000020f      0xd07 ./src/GSM.o
+ .debug_info    0x00000f16      0x1bd ./src/RTC.o
+ .debug_info    0x000010d3      0x1de ./src/myString.o
+ .debug_info    0x000012b1      0x2d5 ./src/r_cg_adc.o
+ .debug_info    0x00001586      0x10f ./src/r_cg_adc_user.o
+ .debug_info    0x00001695      0x133 ./src/r_cg_cgc.o
+ .debug_info    0x000017c8       0x7b ./src/r_cg_cgc_user.o
+ .debug_info    0x00001843      0x203 ./src/r_cg_port.o
+ .debug_info    0x00001a46       0x48 ./src/r_cg_port_user.o
+ .debug_info    0x00001a8e      0x62b ./src/r_cg_serial.o
+ .debug_info    0x000020b9      0x1b9 ./src/r_cg_serial_user.o
+ .debug_info    0x00002272      0x3a6 ./src/r_cg_timer.o
+ .debug_info    0x00002618       0x73 ./src/r_cg_timer_user.o
+ .debug_info    0x0000268b      0x108 ./src/r_cg_vector_table.o
+ .debug_info    0x00002793       0x7d ./src/r_hardware_setup.o
+ .debug_info    0x00002810      0x1e5 ./src/r_main.o
+ .debug_info    0x000029f5       0x7e ./src/r_reset_program.o
+
+.debug_abbrev   0x00000000      0xdd8
+ .debug_abbrev  0x00000000      0x10e ./src/ADC.o
+ .debug_abbrev  0x0000010e      0x2c2 ./src/GSM.o
+ .debug_abbrev  0x000003d0       0xcd ./src/RTC.o
+ .debug_abbrev  0x0000049d       0xb1 ./src/myString.o
+ .debug_abbrev  0x0000054e       0xf1 ./src/r_cg_adc.o
+ .debug_abbrev  0x0000063f       0x82 ./src/r_cg_adc_user.o
+ .debug_abbrev  0x000006c1       0x82 ./src/r_cg_cgc.o
+ .debug_abbrev  0x00000743       0x53 ./src/r_cg_cgc_user.o
+ .debug_abbrev  0x00000796       0x8f ./src/r_cg_port.o
+ .debug_abbrev  0x00000825       0x1b ./src/r_cg_port_user.o
+ .debug_abbrev  0x00000840      0x181 ./src/r_cg_serial.o
+ .debug_abbrev  0x000009c1       0xec ./src/r_cg_serial_user.o
+ .debug_abbrev  0x00000aad       0xcd ./src/r_cg_timer.o
+ .debug_abbrev  0x00000b7a       0x53 ./src/r_cg_timer_user.o
+ .debug_abbrev  0x00000bcd       0x7c ./src/r_cg_vector_table.o
+ .debug_abbrev  0x00000c49       0x5c ./src/r_hardware_setup.o
+ .debug_abbrev  0x00000ca5      0x11f ./src/r_main.o
+ .debug_abbrev  0x00000dc4       0x14 ./src/r_reset_program.o
+
+.debug_aranges  0x00000000      0x238
+ .debug_aranges
+                0x00000000       0x20 ./src/ADC.o
+ .debug_aranges
+                0x00000020       0x20 ./src/GSM.o
+ .debug_aranges
+                0x00000040       0x20 ./src/RTC.o
+ .debug_aranges
+                0x00000060       0x20 ./src/myString.o
+ .debug_aranges
+                0x00000080       0x20 ./src/r_cg_adc.o
+ .debug_aranges
+                0x000000a0       0x20 ./src/r_cg_adc_user.o
+ .debug_aranges
+                0x000000c0       0x20 ./src/r_cg_cgc.o
+ .debug_aranges
+                0x000000e0       0x20 ./src/r_cg_cgc_user.o
+ .debug_aranges
+                0x00000100       0x20 ./src/r_cg_port.o
+ .debug_aranges
+                0x00000120       0x18 ./src/r_cg_port_user.o
+ .debug_aranges
+                0x00000138       0x20 ./src/r_cg_serial.o
+ .debug_aranges
+                0x00000158       0x20 ./src/r_cg_serial_user.o
+ .debug_aranges
+                0x00000178       0x20 ./src/r_cg_timer.o
+ .debug_aranges
+                0x00000198       0x20 ./src/r_cg_timer_user.o
+ .debug_aranges
+                0x000001b8       0x20 ./src/r_cg_vector_table.o
+ .debug_aranges
+                0x000001d8       0x20 ./src/r_hardware_setup.o
+ .debug_aranges
+                0x000001f8       0x20 ./src/r_main.o
+ .debug_aranges
+                0x00000218       0x20 ./src/r_reset_program.o
+
+.debug_line     0x00000000     0x1d59
+ .debug_line    0x00000000      0x16f ./src/ADC.o
+ .debug_line    0x0000016f      0xb77 ./src/GSM.o
+ .debug_line    0x00000ce6       0xfe ./src/RTC.o
+ .debug_line    0x00000de4      0x294 ./src/myString.o
+ .debug_line    0x00001078      0x144 ./src/r_cg_adc.o
+ .debug_line    0x000011bc       0x61 ./src/r_cg_adc_user.o
+ .debug_line    0x0000121d       0x74 ./src/r_cg_cgc.o
+ .debug_line    0x00001291       0x69 ./src/r_cg_cgc_user.o
+ .debug_line    0x000012fa       0x9f ./src/r_cg_port.o
+ .debug_line    0x00001399       0x1d ./src/r_cg_port_user.o
+ .debug_line    0x000013b6      0x357 ./src/r_cg_serial.o
+ .debug_line    0x0000170d      0x150 ./src/r_cg_serial_user.o
+ .debug_line    0x0000185d      0x154 ./src/r_cg_timer.o
+ .debug_line    0x000019b1       0x55 ./src/r_cg_timer_user.o
+ .debug_line    0x00001a06       0x68 ./src/r_cg_vector_table.o
+ .debug_line    0x00001a6e       0x98 ./src/r_hardware_setup.o
+ .debug_line    0x00001b06       0xf4 ./src/r_main.o
+ .debug_line    0x00001bfa      0x15f ./src/r_reset_program.o
+
+.debug_str      0x00000000      0xba6
+ .debug_str     0x00000000      0x198 ./src/ADC.o
+                                0x1c8 (size before relaxing)
+ .debug_str     0x00000198      0x34f ./src/GSM.o
+                                0x4e7 (size before relaxing)
+ .debug_str     0x000004e7       0x29 ./src/RTC.o
+                                0x1a0 (size before relaxing)
+ .debug_str     0x00000510       0x9b ./src/myString.o
+                                0x1e0 (size before relaxing)
+ .debug_str     0x000005ab       0xcb ./src/r_cg_adc.o
+                                0x22f (size before relaxing)
+ .debug_str     0x00000676       0x27 ./src/r_cg_adc_user.o
+                                0x15e (size before relaxing)
+ .debug_str     0x0000069d       0x2d ./src/r_cg_cgc.o
+                                0x15e (size before relaxing)
+ .debug_str     0x000006ca       0x38 ./src/r_cg_cgc_user.o
+                                0x169 (size before relaxing)
+ .debug_str     0x00000702       0x41 ./src/r_cg_port.o
+                                0x19c (size before relaxing)
+ .debug_str     0x00000743       0x18 ./src/r_cg_port_user.o
+                                0x141 (size before relaxing)
+ .debug_str     0x0000075b      0x20b ./src/r_cg_serial.o
+                                0x392 (size before relaxing)
+ .debug_str     0x00000966       0xf9 ./src/r_cg_serial_user.o
+                                0x2ca (size before relaxing)
+ .debug_str     0x00000a5f       0x5b ./src/r_cg_timer.o
+                                0x21c (size before relaxing)
+ .debug_str     0x00000aba       0x38 ./src/r_cg_timer_user.o
+                                0x161 (size before relaxing)
+ .debug_str     0x00000af2       0x4c ./src/r_cg_vector_table.o
+                                0x18e (size before relaxing)
+ .debug_str     0x00000b3e       0x35 ./src/r_hardware_setup.o
+                                0x15e (size before relaxing)
+ .debug_str     0x00000b73       0x33 ./src/r_main.o
+                                0x19d (size before relaxing)
+
+.comment        0x00000000       0xa0
+ .comment       0x00000000       0xa0 ./src/ADC.o
+                                 0xa1 (size before relaxing)
+ .comment       0x00000000       0xa1 ./src/GSM.o
+ .comment       0x00000000       0xa1 ./src/RTC.o
+ .comment       0x00000000       0xa1 ./src/myString.o
+ .comment       0x00000000       0xa1 ./src/r_cg_adc.o
+ .comment       0x00000000       0xa1 ./src/r_cg_adc_user.o
+ .comment       0x00000000       0xa1 ./src/r_cg_cgc.o
+ .comment       0x00000000       0xa1 ./src/r_cg_cgc_user.o
+ .comment       0x00000000       0xa1 ./src/r_cg_port.o
+ .comment       0x00000000       0xa1 ./src/r_cg_port_user.o
+ .comment       0x00000000       0xa1 ./src/r_cg_serial.o
+ .comment       0x00000000       0xa1 ./src/r_cg_serial_user.o
+ .comment       0x00000000       0xa1 ./src/r_cg_timer.o
+ .comment       0x00000000       0xa1 ./src/r_cg_timer_user.o
+ .comment       0x00000000       0xa1 ./src/r_cg_vector_table.o
+ .comment       0x00000000       0xa1 ./src/r_hardware_setup.o
+ .comment       0x00000000       0xa1 ./src/r_main.o
+ .comment       0x00000000       0xa1 libGSMv1_01.a(_atoi.o)
+ .comment       0x00000000       0xa1 libGSMv1_01.a(sprintf.o)
+ .comment       0x00000000       0xa1 libGSMv1_01.a(frmwri.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_sf_to_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_addsub_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_mul_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_div_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ne_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_ge_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_lt_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_le_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_si_to_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_df_to_si.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_make_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_thenan_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_sf.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_pack_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_unpack_df.o)
+ .comment       0x00000000       0xa1 C:\PROGRA~2\GCCFOR~1.201\rl78-elf\rl78-elf/lib/gcc/rl78-elf/4.9.2.201703-GNURL78/g13\libgcc.a(_fpcmp_parts_df.o)

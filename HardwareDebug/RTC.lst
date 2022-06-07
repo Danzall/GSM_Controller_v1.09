@@ -1,0 +1,291 @@
+   1                             	r8	=	0xffef0
+   2                             	r16	=	0xffee8
+   3                             	r24	=	0xffee0
+   4                             	r9	=	0xffef1
+   5                             	r17	=	0xffee9
+   6                             	r25	=	0xffee1
+   7                             	r10	=	0xffef2
+   8                             	r18	=	0xffeea
+   9                             	r26	=	0xffee2
+  10                             	r11	=	0xffef3
+  11                             	r19	=	0xffeeb
+  12                             	r27	=	0xffee3
+  13                             	r12	=	0xffef4
+  14                             	r20	=	0xffeec
+  15                             	r28	=	0xffee4
+  16                             	r13	=	0xffef5
+  17                             	r21	=	0xffeed
+  18                             	r29	=	0xffee5
+  19                             	r14	=	0xffef6
+  20                             	r22	=	0xffeee
+  21                             	r30	=	0xffee6
+  22                             	r15	=	0xffef7
+  23                             	r23	=	0xffeef
+  24                             	r31	=	0xffee7
+  25                             	MDUC	=	0xf00e8
+  26                             	MDAL	=	0xffff0
+  27                             	MDAH	=	0xffff2
+  28                             	MDBL	=	0xffff6
+  29                             	MDBH	=	0xffff4
+  30                             	MDCL	=	0xf00e0
+  31                             	MDCH	=	0xf00e2
+  32                             	.text
+  33                             	.Ltext0:
+  34                             		.comm	_seconds,2,2
+  35                             		.comm	_minutes,2,2
+  36                             		.comm	_hours,2,2
+  37                             		.comm	_days,2,2
+  38                             		.comm	_weeks,2,2
+  39                             		.comm	_years,2,2
+  40                             		.comm	_uptime,14,2
+  41                             		.global	_incSeconds
+  43                             	_incSeconds:
+  44                             	.LFB0:
+  45                             		.file 1 "../src/RTC.c"
+   1:../src/RTC.c  **** /*
+   2:../src/RTC.c  ****  * RTC.c
+   3:../src/RTC.c  ****  *
+   4:../src/RTC.c  ****  *  Created on: Mar 1, 2018
+   5:../src/RTC.c  ****  *      Author: Jeefo
+   6:../src/RTC.c  ****  */
+   7:../src/RTC.c  **** 
+   8:../src/RTC.c  **** #include "r_cg_macrodriver.h"
+   9:../src/RTC.c  **** #include "r_cg_cgc.h"
+  10:../src/RTC.c  **** #include "r_cg_port.h"
+  11:../src/RTC.c  **** #include "r_cg_serial.h"
+  12:../src/RTC.c  **** //#include "r_cg_adc.h"
+  13:../src/RTC.c  **** #include "r_cg_timer.h"
+  14:../src/RTC.c  **** #include "r_cg_wdt.h"
+  15:../src/RTC.c  **** /* Start user code for include. Do not edit comment generated here */
+  16:../src/RTC.c  **** #include "GSM.h"
+  17:../src/RTC.c  **** #include "stdio.h"
+  18:../src/RTC.c  **** #include "RTC.h"
+  19:../src/RTC.c  **** /* End user code. Do not edit comment generated here */
+  20:../src/RTC.c  **** #include "r_cg_userdefine.h"
+  21:../src/RTC.c  **** 
+  22:../src/RTC.c  **** unsigned int seconds;
+  23:../src/RTC.c  **** unsigned int minutes;
+  24:../src/RTC.c  **** unsigned int hours;
+  25:../src/RTC.c  **** unsigned int days;
+  26:../src/RTC.c  **** unsigned int weeks;
+  27:../src/RTC.c  **** unsigned int years;
+  28:../src/RTC.c  **** rtc uptime;
+  29:../src/RTC.c  **** 
+  30:../src/RTC.c  **** void incSeconds(){
+  46                             		.loc 1 30 0
+  47                             		; start of function
+  48                             		; locals: 94 bytes
+  49 0000 20 5E                   		subw	sp, #94
+  50                             	.LCFI0:
+  31:../src/RTC.c  **** 	char time[60];
+  32:../src/RTC.c  **** 	uptime.seconds++;
+  51                             		.loc 1 32 0
+  52 0002 AF 00 00                		movw	ax, !_uptime+12
+  53 0005 BD F0                   		movw	r8, ax
+  54 0007 A6 F0                   		incw	r8
+  55 0009 AD F0                   		movw	ax, r8
+  56 000b BF 00 00                		movw	!_uptime+12, ax
+  33:../src/RTC.c  **** 	if((uptime.seconds == 20)||(uptime.seconds == 40)||(uptime.seconds == 58)){
+  57                             		.loc 1 33 0
+  58 000e BD F0                   		movw	r8, ax
+  34:../src/RTC.c  **** 
+  35:../src/RTC.c  **** 	}
+  36:../src/RTC.c  **** 	if (uptime.seconds >= 60){
+  59                             		.loc 1 36 0
+  60 0010 AF 00 00                		movw	ax, !_uptime+12
+  61 0013 BD F0                   		movw	r8, ax
+  62 0015 44 3B 00                		cmpw	ax, #59
+  63 0018 71 FF                   		 xor1	CY, a.7
+  64 001a 61 E3                   		 skh
+  65 001c EC 78 00 00             		 br	!!.L3
+  37:../src/RTC.c  **** 		uptime.seconds = 0;
+  66                             		.loc 1 37 0
+  67 0020 F6                      		clrw	ax
+  68 0021 BF 00 00                		movw	!_uptime+12, ax
+  38:../src/RTC.c  **** 		uptime.minutes++;
+  69                             		.loc 1 38 0
+  70 0024 AF 00 00                		movw	ax, !_uptime+10
+  71 0027 BD F0                   		movw	r8, ax
+  72 0029 A6 F0                   		incw	r8
+  73 002b AD F0                   		movw	ax, r8
+  74 002d BF 00 00                		movw	!_uptime+10, ax
+  39:../src/RTC.c  **** 		if((uptime.minutes == 2)||(uptime.minutes == 5)||(uptime.minutes == 10)||(uptime.minutes == 20)||
+  75                             		.loc 1 39 0
+  76 0030 BD F0                   		movw	r8, ax
+  77 0032 44 02 00                		cmpw	ax, #2
+  78 0035 61 F8                   		 sknz
+  79 0037 EC 78 00 00             		 br	!!.L3
+  80                             		.loc 1 39 0 is_stmt 0 discriminator 1
+  81 003b AF 00 00                		movw	ax, !_uptime+10
+  82 003e BD F0                   		movw	r8, ax
+  83 0040 44 05 00                		cmpw	ax, #5
+  84 0043 61 F8                   		 sknz
+  85 0045 EC 78 00 00             		 br	!!.L3
+  86                             		.loc 1 39 0 discriminator 2
+  87 0049 AF 00 00                		movw	ax, !_uptime+10
+  88 004c BD F0                   		movw	r8, ax
+  89 004e 44 0A 00                		cmpw	ax, #10
+  90 0051 61 F8                   		 sknz
+  91 0053 EC 78 00 00             		 br	!!.L3
+  92                             		.loc 1 39 0 discriminator 3
+  93 0057 AF 00 00                		movw	ax, !_uptime+10
+  94 005a BD F0                   		movw	r8, ax
+  95 005c 44 14 00                		cmpw	ax, #20
+  96 005f 61 F8                   		 sknz
+  97 0061 EC 78 00 00             		 br	!!.L3
+  98                             		.loc 1 39 0 discriminator 4
+  99 0065 AF 00 00                		movw	ax, !_uptime+10
+ 100 0068 BD F0                   		movw	r8, ax
+ 101 006a 44 1E 00                		cmpw	ax, #30
+ 102 006d 61 F8                   		 sknz
+ 103 006f EC 78 00 00             		 br	!!.L3
+ 104                             		.loc 1 39 0 discriminator 5
+ 105 0073 AF 00 00                		movw	ax, !_uptime+10
+ 106 0076 BD F0                   		movw	r8, ax
+ 107                             	.L3:
+  40:../src/RTC.c  **** 
+  41:../src/RTC.c  **** 		}
+  42:../src/RTC.c  **** 
+  43:../src/RTC.c  **** 	}
+  44:../src/RTC.c  **** 	if (uptime.minutes >= 60){
+ 108                             		.loc 1 44 0 is_stmt 1
+ 109 0078 AF 00 00                		movw	ax, !_uptime+10
+ 110 007b BD F0                   		movw	r8, ax
+ 111 007d 44 3B 00                		cmpw	ax, #59
+ 112 0080 71 FF                   		 xor1	CY, a.7
+ 113 0082 61 E3                   		 skh
+ 114 0084 EC 98 00 00             		 br	!!.L4
+ 115                             	.LBB2:
+  45:../src/RTC.c  **** 		uptime.minutes = 0;
+ 116                             		.loc 1 45 0
+ 117 0088 F6                      		clrw	ax
+ 118 0089 BF 00 00                		movw	!_uptime+10, ax
+  46:../src/RTC.c  **** 		uptime.hours++;
+ 119                             		.loc 1 46 0
+ 120 008c AF 00 00                		movw	ax, !_uptime+8
+ 121 008f BD F0                   		movw	r8, ax
+ 122 0091 A6 F0                   		incw	r8
+ 123 0093 AD F0                   		movw	ax, r8
+ 124 0095 BF 00 00                		movw	!_uptime+8, ax
+ 125                             	.L4:
+ 126                             	.LBE2:
+  47:../src/RTC.c  **** 		char sms[30];
+  48:../src/RTC.c  **** 		//sprintf(sms, "GSM module uptime-%dd:%dh:%dm:%ds", uptime.days,uptime.hours, uptime.minutes, upt
+  49:../src/RTC.c  **** 		//strcpy(sms,)
+  50:../src/RTC.c  **** 		//sendSMS("0720631005", sms);
+  51:../src/RTC.c  **** 		//buildInfo();
+  52:../src/RTC.c  **** 	}
+  53:../src/RTC.c  **** 	if (uptime.hours >= 24){
+ 127                             		.loc 1 53 0
+ 128 0098 AF 00 00                		movw	ax, !_uptime+8
+ 129 009b BD F0                   		movw	r8, ax
+ 130 009d 44 17 00                		cmpw	ax, #23
+ 131 00a0 71 FF                   		 xor1	CY, a.7
+ 132 00a2 61 E3                   		 skh
+ 133 00a4 EC B8 00 00             		 br	!!.L5
+  54:../src/RTC.c  **** 		uptime.hours = 0;
+ 134                             		.loc 1 54 0
+ 135 00a8 F6                      		clrw	ax
+ 136 00a9 BF 00 00                		movw	!_uptime+8, ax
+  55:../src/RTC.c  **** 		uptime.days++;
+ 137                             		.loc 1 55 0
+ 138 00ac AF 00 00                		movw	ax, !_uptime+6
+ 139 00af BD F0                   		movw	r8, ax
+ 140 00b1 A6 F0                   		incw	r8
+ 141 00b3 AD F0                   		movw	ax, r8
+ 142 00b5 BF 00 00                		movw	!_uptime+6, ax
+ 143                             	.L5:
+  56:../src/RTC.c  **** 	}
+  57:../src/RTC.c  **** 	if (uptime.days >= 7){
+ 144                             		.loc 1 57 0
+ 145 00b8 AF 00 00                		movw	ax, !_uptime+6
+ 146 00bb BD F0                   		movw	r8, ax
+ 147 00bd 44 06 00                		cmpw	ax, #6
+ 148 00c0 71 FF                   		 xor1	CY, a.7
+ 149 00c2 61 E3                   		 skh
+ 150 00c4 EC D8 00 00             		 br	!!.L6
+  58:../src/RTC.c  **** 		uptime.days = 0;
+ 151                             		.loc 1 58 0
+ 152 00c8 F6                      		clrw	ax
+ 153 00c9 BF 00 00                		movw	!_uptime+6, ax
+  59:../src/RTC.c  **** 		uptime.weeks++;
+ 154                             		.loc 1 59 0
+ 155 00cc AF 00 00                		movw	ax, !_uptime+4
+ 156 00cf BD F0                   		movw	r8, ax
+ 157 00d1 A6 F0                   		incw	r8
+ 158 00d3 AD F0                   		movw	ax, r8
+ 159 00d5 BF 00 00                		movw	!_uptime+4, ax
+ 160                             	.L6:
+  60:../src/RTC.c  **** 	}
+  61:../src/RTC.c  **** 	if (uptime.weeks >= 52){
+ 161                             		.loc 1 61 0
+ 162 00d8 AF 00 00                		movw	ax, !_uptime+4
+ 163 00db BD F0                   		movw	r8, ax
+ 164 00dd 44 33 00                		cmpw	ax, #51
+ 165 00e0 71 FF                   		 xor1	CY, a.7
+ 166 00e2 61 E3                   		 skh
+ 167 00e4 EC F8 00 00             		 br	!!.L1
+  62:../src/RTC.c  **** 		uptime.weeks = 0;
+ 168                             		.loc 1 62 0
+ 169 00e8 F6                      		clrw	ax
+ 170 00e9 BF 00 00                		movw	!_uptime+4, ax
+  63:../src/RTC.c  **** 		uptime.years++;
+ 171                             		.loc 1 63 0
+ 172 00ec AF 00 00                		movw	ax, !_uptime
+ 173 00ef BD F0                   		movw	r8, ax
+ 174 00f1 A6 F0                   		incw	r8
+ 175 00f3 AD F0                   		movw	ax, r8
+ 176 00f5 BF 00 00                		movw	!_uptime, ax
+ 177                             	.L1:
+  64:../src/RTC.c  **** 	}
+  65:../src/RTC.c  **** 	//sprintf(time, "years:%.2d weeks:%d days:%d hours:%d minutes:%d seconds:%d", uptime.years, uptime
+  66:../src/RTC.c  **** 	//sendData(time,UART0);
+  67:../src/RTC.c  **** 	//sendData("\r\n",UART0);
+  68:../src/RTC.c  **** }
+ 178                             		.loc 1 68 0
+ 179 00f8 10 5E                   		addw	sp, #94
+ 180 00fa D7                      		ret
+ 181                             	.LFE0:
+ 183                             		.global	_getUptime
+ 185                             	_getUptime:
+ 186                             	.LFB1:
+  69:../src/RTC.c  **** 
+  70:../src/RTC.c  **** rtc getUptime(){
+ 187                             		.loc 1 70 0
+  71:../src/RTC.c  **** 	return uptime;
+ 188                             		.loc 1 71 0
+ 189 00fb A8 04                   		movw	ax, [sp+4]
+ 190 00fd BD F0                   		movw	r8, ax
+ 191 00ff AF 00 00                		movw	ax, !_uptime
+ 192 0102 BD F2                   		movw	r10, ax
+ 193 0104 AD F0                   		movw	ax, r8
+ 194 0106 BD F4                   		movw	r12, ax
+ 195 0108 EA F4                   		movw	de, r12
+ 196 010a AD F2                   		movw	ax, r10
+ 197 010c B9                      		movw	[de], ax
+ 198 010d AF 00 00                		movw	ax, !_uptime+2
+ 199 0110 BD F2                   		movw	r10, ax
+ 200 0112 BA 02                   		movw	[de+2], ax
+ 201 0114 AF 00 00                		movw	ax, !_uptime+4
+ 202 0117 BD F2                   		movw	r10, ax
+ 203 0119 BA 04                   		movw	[de+4], ax
+ 204 011b AF 00 00                		movw	ax, !_uptime+6
+ 205 011e BD F2                   		movw	r10, ax
+ 206 0120 BA 06                   		movw	[de+6], ax
+ 207 0122 AF 00 00                		movw	ax, !_uptime+8
+ 208 0125 BD F2                   		movw	r10, ax
+ 209 0127 BA 08                   		movw	[de+8], ax
+ 210 0129 AF 00 00                		movw	ax, !_uptime+10
+ 211 012c BD F2                   		movw	r10, ax
+ 212 012e BA 0A                   		movw	[de+10], ax
+ 213 0130 AF 00 00                		movw	ax, !_uptime+12
+ 214 0133 BD F2                   		movw	r10, ax
+ 215 0135 BA 0C                   		movw	[de+12], ax
+  72:../src/RTC.c  **** }
+ 216                             		.loc 1 72 0
+ 217 0137 A8 04                   		movw	ax, [sp+4]
+ 218 0139 BD F0                   		movw	r8, ax
+ 219 013b D7                      		ret
+ 220                             	.LFE1:
+ 260                             	.Letext0:
+ 261                             		.file 2 "../src/RTC.h"

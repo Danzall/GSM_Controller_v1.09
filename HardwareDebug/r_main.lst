@@ -1,0 +1,294 @@
+   1                             	r8	=	0xffef0
+   2                             	r16	=	0xffee8
+   3                             	r24	=	0xffee0
+   4                             	r9	=	0xffef1
+   5                             	r17	=	0xffee9
+   6                             	r25	=	0xffee1
+   7                             	r10	=	0xffef2
+   8                             	r18	=	0xffeea
+   9                             	r26	=	0xffee2
+  10                             	r11	=	0xffef3
+  11                             	r19	=	0xffeeb
+  12                             	r27	=	0xffee3
+  13                             	r12	=	0xffef4
+  14                             	r20	=	0xffeec
+  15                             	r28	=	0xffee4
+  16                             	r13	=	0xffef5
+  17                             	r21	=	0xffeed
+  18                             	r29	=	0xffee5
+  19                             	r14	=	0xffef6
+  20                             	r22	=	0xffeee
+  21                             	r30	=	0xffee6
+  22                             	r15	=	0xffef7
+  23                             	r23	=	0xffeef
+  24                             	r31	=	0xffee7
+  25                             	MDUC	=	0xf00e8
+  26                             	MDAL	=	0xffff0
+  27                             	MDAH	=	0xffff2
+  28                             	MDBL	=	0xffff6
+  29                             	MDBH	=	0xffff4
+  30                             	MDCL	=	0xf00e0
+  31                             	MDCH	=	0xf00e2
+  32                             	.text
+  33                             	.Ltext0:
+  34                             		.global	_timer
+  35                             	.bss
+  36                             		.balign 2
+  39                             	_timer:
+  40 0000 00 00                   		.zero	2
+  41                             		.global	_tick
+  42                             		.balign 2
+  45                             	_tick:
+  46 0002 00 00                   		.zero	2
+  47                             		.comm	_gsm,10,1
+  48                             		.section	.rodata
+  49                             	.LC0:
+  50 0000 52 75 6E 6E 69 6E 67 0D 		.string	"Running\r\n"
+  50      0A 00 
+  51                             	.text
+  52                             		.global	_main
+  54                             	_main:
+  55                             	.LFB0:
+  56                             		.file 1 "../src/r_main.c"
+   1:../src/r_main.c **** /**************************************************************************************************
+   2:../src/r_main.c **** * DISCLAIMER
+   3:../src/r_main.c **** * This software is supplied by Renesas Electronics Corporation and is only intended for use with Re
+   4:../src/r_main.c **** * No other uses are authorized. This software is owned by Renesas Electronics Corporation and is pr
+   5:../src/r_main.c **** * applicable laws, including copyright laws. 
+   6:../src/r_main.c **** * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER
+   7:../src/r_main.c **** * OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULA
+   8:../src/r_main.c **** * NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED N
+   9:../src/r_main.c **** * LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+  10:../src/r_main.c **** * INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, E
+  11:../src/r_main.c **** * ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  12:../src/r_main.c **** * Renesas reserves the right, without notice, to make changes to this software and to discontinue t
+  13:../src/r_main.c **** * of this software. By using this software, you agree to the additional terms and conditions found 
+  14:../src/r_main.c **** * following link:
+  15:../src/r_main.c **** * http://www.renesas.com/disclaimer
+  16:../src/r_main.c **** *
+  17:../src/r_main.c **** * Copyright (C) 2011, 2016 Renesas Electronics Corporation. All rights reserved.
+  18:../src/r_main.c **** ***************************************************************************************************
+  19:../src/r_main.c **** 
+  20:../src/r_main.c **** /**************************************************************************************************
+  21:../src/r_main.c **** * File Name    : r_main.c
+  22:../src/r_main.c **** * Version      : CodeGenerator for RL78/G13 V2.03.04.01 [11 Nov 2016]
+  23:../src/r_main.c **** * Device(s)    : R5F1006C
+  24:../src/r_main.c **** * Tool-Chain   : GCCRL78
+  25:../src/r_main.c **** * Description  : This file implements main function.
+  26:../src/r_main.c **** * Creation Date: 8/7/2018
+  27:../src/r_main.c **** ***************************************************************************************************
+  28:../src/r_main.c **** 
+  29:../src/r_main.c **** /**************************************************************************************************
+  30:../src/r_main.c **** Includes
+  31:../src/r_main.c **** ***************************************************************************************************
+  32:../src/r_main.c **** #include "r_cg_macrodriver.h"
+  33:../src/r_main.c **** #include "r_cg_cgc.h"
+  34:../src/r_main.c **** #include "r_cg_port.h"
+  35:../src/r_main.c **** #include "r_cg_serial.h"
+  36:../src/r_main.c **** #include "r_cg_adc.h"
+  37:../src/r_main.c **** #include "r_cg_timer.h"
+  38:../src/r_main.c **** /* Start user code for include. Do not edit comment generated here */
+  39:../src/r_main.c **** #include "GSM.h"
+  40:../src/r_main.c **** #include "RTC.h"
+  41:../src/r_main.c **** #include "board.h"
+  42:../src/r_main.c **** #include "stdio.h"
+  43:../src/r_main.c **** #include "stdlib.h"
+  44:../src/r_main.c **** #include "ADC.h"
+  45:../src/r_main.c **** /* End user code. Do not edit comment generated here */
+  46:../src/r_main.c **** #include "r_cg_userdefine.h"
+  47:../src/r_main.c **** 
+  48:../src/r_main.c **** /**************************************************************************************************
+  49:../src/r_main.c **** Global variables and functions
+  50:../src/r_main.c **** ***************************************************************************************************
+  51:../src/r_main.c **** /* Start user code for global. Do not edit comment generated here */
+  52:../src/r_main.c **** void service();
+  53:../src/r_main.c **** int timer = 0;
+  54:../src/r_main.c **** int tick = 0;
+  55:../src/r_main.c **** char gsm[10];
+  56:../src/r_main.c **** //char table = []
+  57:../src/r_main.c **** 
+  58:../src/r_main.c **** 
+  59:../src/r_main.c **** 
+  60:../src/r_main.c **** /* End user code. Do not edit comment generated here */
+  61:../src/r_main.c **** void R_MAIN_UserInit(void);
+  62:../src/r_main.c **** 
+  63:../src/r_main.c **** /**************************************************************************************************
+  64:../src/r_main.c **** * Function Name: main
+  65:../src/r_main.c **** * Description  : This function implements main function.
+  66:../src/r_main.c **** * Arguments    : None
+  67:../src/r_main.c **** * Return Value : None
+  68:../src/r_main.c **** ***************************************************************************************************
+  69:../src/r_main.c **** void main(void)
+  70:../src/r_main.c **** {
+  57                             		.loc 1 70 0
+  58                             		; start of function
+  59                             		; locals: 2 bytes
+  60                             		; outgoing: 4 bytes
+  61 0000 20 06                   		subw	sp, #6
+  62                             	.LCFI0:
+  71:../src/r_main.c ****     R_MAIN_UserInit();
+  63                             		.loc 1 71 0
+  64 0002 FC 00 00 00             		call	!!%code(_R_MAIN_UserInit)
+  72:../src/r_main.c ****     /* Start user code. Do not edit comment generated here */
+  73:../src/r_main.c ****     GSM_PWR = 1;
+  65                             		.loc 1 73 0
+  66 0006 C9 F0 0E FF             		movw	r8, #-242
+  67 000a AD F0                   		movw	ax, r8
+  68 000c BD F2                   		movw	r10, ax
+  69 000e FA F2                   		movw	hl, r10
+  70 0010 71 F2                   		set1	[hl].7 ;insvmisalignqi [hl],#1,#7,#1 {0}
+  71                             	.L3:
+  74:../src/r_main.c ****     while (1U)
+  75:../src/r_main.c ****     {
+  76:../src/r_main.c ****         //
+  77:../src/r_main.c ****         recData();
+  72                             		.loc 1 77 0
+  73 0012 FC 00 00 00             		call	!!%code(_recData)
+  78:../src/r_main.c **** 
+  79:../src/r_main.c **** 		if (tick == 1){
+  74                             		.loc 1 79 0
+  75 0016 AF 00 00                		movw	ax, !_tick
+  76 0019 BD F0                   		movw	r8, ax
+  77 001b 44 01 00                		cmpw	ax, #1
+  78 001e 61 E8                   		 skz
+  79 0020 EC 82 00 00             		 br	!!.L2
+  80:../src/r_main.c **** 			tick = 0;
+  80                             		.loc 1 80 0
+  81 0024 F6                      		clrw	ax
+  82 0025 BF 00 00                		movw	!_tick, ax
+  81:../src/r_main.c **** 			timer++;
+  83                             		.loc 1 81 0
+  84 0028 AF 00 00                		movw	ax, !_timer
+  85 002b BD F0                   		movw	r8, ax
+  86 002d A6 F0                   		incw	r8
+  87 002f AD F0                   		movw	ax, r8
+  88 0031 BF 00 00                		movw	!_timer, ax
+  82:../src/r_main.c **** 			if (timer == 1000){
+  89                             		.loc 1 82 0
+  90 0034 BD F0                   		movw	r8, ax
+  91 0036 44 E8 03                		cmpw	ax, #1000
+  92 0039 61 E8                   		 skz
+  93 003b EC 82 00 00             		 br	!!.L2
+  94                             	.LBB2:
+  83:../src/r_main.c **** 				timer = 0;
+  95                             		.loc 1 83 0
+  96 003f F6                      		clrw	ax
+  97 0040 BF 00 00                		movw	!_timer, ax
+  84:../src/r_main.c **** 				service();
+  98                             		.loc 1 84 0
+  99 0043 FC 00 00 00             		call	!!%code(_service)
+  85:../src/r_main.c **** 				//P1_bit.no7 = 0;
+  86:../src/r_main.c **** 				//P2_bit.no1 = 0;
+  87:../src/r_main.c **** 				LED ^= 1;
+ 100                             		.loc 1 87 0
+ 101 0047 C9 F2 01 FF             		movw	r10, #-255
+ 102 004b C9 F0 01 FF             		movw	r8, #-255
+ 103 004f AD F0                   		movw	ax, r8
+ 104 0051 BD F4                   		movw	r12, ax
+ 105 0053 FA F4                   		movw	hl, r12
+ 106 0055 8B                      		mov	a, [hl]
+ 107 0056 31 69                   		shl	a, 6
+ 108 0058 31 7A                   		shr	a, 7 ;extzvmisalignqi a,[hl],#1,#1
+ 109 005a 9D F0                   		mov	r8, a
+ 110 005c 7A F0 01                		xor	r8, #1
+ 111 005f 5A F0 01                		and	r8, #1
+ 112 0062 AD F2                   		movw	ax, r10
+ 113 0064 BD F4                   		movw	r12, ax
+ 114 0066 FA F4                   		movw	hl, r12
+ 115 0068 71 04 F0                		mov1	CY, r8.0
+ 116 006b 71 91                   		mov1	[hl].1, CY ;insvmisalignqi [hl],#1,#1,r8 {0}
+  88:../src/r_main.c **** 				sendData("Running\r\n",UART0);
+ 117                             		.loc 1 88 0
+ 118 006d 30 00 00                		movw	ax, #.LC0
+ 119 0070 B8 00                   		movw	[sp], ax
+ 120 0072 F6                      		clrw	ax
+ 121 0073 B8 02                   		movw	[sp+2], ax
+ 122 0075 FC 00 00 00             		call	!!%code(_sendData)
+  89:../src/r_main.c **** 				//char ADCval[10];
+  90:../src/r_main.c **** 				//GetADC(ADCval);
+  91:../src/r_main.c **** 				//sendData(ADCval,UART0);
+  92:../src/r_main.c **** 				//sendData("\r\n",UART0);
+  93:../src/r_main.c **** 				//strcpy(gsm,"#!$E");
+  94:../src/r_main.c **** 				//GPRS_Send(gsm);
+  95:../src/r_main.c **** 				//GPRS_Send("!!D");
+  96:../src/r_main.c **** 				int num = 72;
+ 123                             		.loc 1 96 0
+ 124 0079 30 48 00                		movw	ax, #72
+ 125 007c B8 04                   		movw	[sp+4], ax
+  97:../src/r_main.c **** 				//sprintf (temp,"Hex: %x, dec: %d", num, num);
+  98:../src/r_main.c **** 				//DataDecrypt();
+  99:../src/r_main.c **** 				R_ADC_Start();
+ 126                             		.loc 1 99 0
+ 127 007e FC 00 00 00             		call	!!%code(_R_ADC_Start)
+ 128                             	.L2:
+ 129                             	.LBE2:
+ 100:../src/r_main.c **** 			}
+ 101:../src/r_main.c **** 
+ 102:../src/r_main.c **** 		}
+ 103:../src/r_main.c ****     }
+ 130                             		.loc 1 103 0
+ 131 0082 EC 12 00 00             		br	!!.L3
+ 132                             	.LFE0:
+ 134                             		.global	_R_MAIN_UserInit
+ 136                             	_R_MAIN_UserInit:
+ 137                             	.LFB1:
+ 104:../src/r_main.c ****     /* End user code. Do not edit comment generated here */
+ 105:../src/r_main.c **** }
+ 106:../src/r_main.c **** 
+ 107:../src/r_main.c **** 
+ 108:../src/r_main.c **** /**************************************************************************************************
+ 109:../src/r_main.c **** * Function Name: R_MAIN_UserInit
+ 110:../src/r_main.c **** * Description  : This function adds user code before implementing main function.
+ 111:../src/r_main.c **** * Arguments    : None
+ 112:../src/r_main.c **** * Return Value : None
+ 113:../src/r_main.c **** ***************************************************************************************************
+ 114:../src/r_main.c **** void R_MAIN_UserInit(void)
+ 115:../src/r_main.c **** {
+ 138                             		.loc 1 115 0
+ 116:../src/r_main.c ****     /* Start user code. Do not edit comment generated here */
+ 117:../src/r_main.c ****     EI();
+ 139                             		.loc 1 117 0
+ 140                             	 ; 117 "../src/r_main.c" 1
+ 141 0086 71 7A FA                		ei
+ 142                             	 ; 0 "" 2
+ 118:../src/r_main.c ****     R_TAU0_Channel0_Start();
+ 143                             		.loc 1 118 0
+ 144 0089 FC 00 00 00             		call	!!%code(_R_TAU0_Channel0_Start)
+ 119:../src/r_main.c ****     R_UART0_Start();
+ 145                             		.loc 1 119 0
+ 146 008d FC 00 00 00             		call	!!%code(_R_UART0_Start)
+ 120:../src/r_main.c ****     R_UART1_Start();
+ 147                             		.loc 1 120 0
+ 148 0091 FC 00 00 00             		call	!!%code(_R_UART1_Start)
+ 121:../src/r_main.c ****     R_ADC_Start();
+ 149                             		.loc 1 121 0
+ 150 0095 FC 00 00 00             		call	!!%code(_R_ADC_Start)
+ 122:../src/r_main.c ****     /* End user code. Do not edit comment generated here */
+ 123:../src/r_main.c **** }
+ 151                             		.loc 1 123 0
+ 152 0099 D7                      		ret
+ 153                             	.LFE1:
+ 155                             		.global	_service
+ 157                             	_service:
+ 158                             	.LFB2:
+ 124:../src/r_main.c **** 
+ 125:../src/r_main.c **** /* Start user code for adding. Do not edit comment generated here */
+ 126:../src/r_main.c **** void service(){
+ 159                             		.loc 1 126 0
+ 127:../src/r_main.c **** 	incSeconds();
+ 160                             		.loc 1 127 0
+ 161 009a FC 00 00 00             		call	!!%code(_incSeconds)
+ 128:../src/r_main.c **** 	GSM_Service();
+ 162                             		.loc 1 128 0
+ 163 009e FC 00 00 00             		call	!!%code(_GSM_Service)
+ 129:../src/r_main.c **** 	ADC_Service();
+ 164                             		.loc 1 129 0
+ 165 00a2 FC 00 00 00             		call	!!%code(_ADC_Service)
+ 130:../src/r_main.c **** 
+ 131:../src/r_main.c **** }
+ 166                             		.loc 1 131 0
+ 167 00a6 D7                      		ret
+ 168                             	.LFE2:
+ 216                             	.Letext0:
+ 217                             		.file 2 "../src/iodefine.h"
+ 218                             		.file 3 "../src/GSM.h"

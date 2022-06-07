@@ -1,0 +1,1146 @@
+   1                             	r8	=	0xffef0
+   2                             	r16	=	0xffee8
+   3                             	r24	=	0xffee0
+   4                             	r9	=	0xffef1
+   5                             	r17	=	0xffee9
+   6                             	r25	=	0xffee1
+   7                             	r10	=	0xffef2
+   8                             	r18	=	0xffeea
+   9                             	r26	=	0xffee2
+  10                             	r11	=	0xffef3
+  11                             	r19	=	0xffeeb
+  12                             	r27	=	0xffee3
+  13                             	r12	=	0xffef4
+  14                             	r20	=	0xffeec
+  15                             	r28	=	0xffee4
+  16                             	r13	=	0xffef5
+  17                             	r21	=	0xffeed
+  18                             	r29	=	0xffee5
+  19                             	r14	=	0xffef6
+  20                             	r22	=	0xffeee
+  21                             	r30	=	0xffee6
+  22                             	r15	=	0xffef7
+  23                             	r23	=	0xffeef
+  24                             	r31	=	0xffee7
+  25                             	MDUC	=	0xf00e8
+  26                             	MDAL	=	0xffff0
+  27                             	MDAH	=	0xffff2
+  28                             	MDBL	=	0xffff6
+  29                             	MDBH	=	0xffff4
+  30                             	MDCL	=	0xf00e0
+  31                             	MDCH	=	0xf00e2
+  32                             	.text
+  33                             	.Ltext0:
+  34                             		.global	_hex
+  35                             		.section	.rodata
+  38                             	_hex:
+  39 0000 30                      		.byte	48
+  40 0001 31                      		.byte	49
+  41 0002 32                      		.byte	50
+  42 0003 33                      		.byte	51
+  43 0004 34                      		.byte	52
+  44 0005 35                      		.byte	53
+  45 0006 36                      		.byte	54
+  46 0007 37                      		.byte	55
+  47 0008 38                      		.byte	56
+  48 0009 39                      		.byte	57
+  49 000a 41                      		.byte	65
+  50 000b 42                      		.byte	66
+  51 000c 43                      		.byte	67
+  52 000d 44                      		.byte	68
+  53 000e 45                      		.byte	69
+  54 000f 46                      		.byte	70
+  55                             	.text
+  56                             		.global	_myStrSection
+  58                             	_myStrSection:
+  59                             	.LFB0:
+  60                             		.file 1 "../src/myString.c"
+   1:../src/myString.c **** 
+   2:../src/myString.c **** #include "string.h"
+   3:../src/myString.c **** #include "stdio.h"
+   4:../src/myString.c **** #include "stdlib.h"
+   5:../src/myString.c **** #include "math.h"
+   6:../src/myString.c **** #include "ctype.h"
+   7:../src/myString.c **** 
+   8:../src/myString.c **** #include "mystring.h"
+   9:../src/myString.c **** 
+  10:../src/myString.c **** 
+  11:../src/myString.c **** const char hex[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+  12:../src/myString.c **** 
+  13:../src/myString.c **** short myStrSection(char *p_str,char *p_result,unsigned char p_size,char p_char,char p_pos){
+  61                             		.loc 1 13 0
+  62                             		; start of function
+  63                             		; locals: 6 bytes
+  64 0000 20 06                   		subw	sp, #6
+  65                             	.LCFI0:
+  14:../src/myString.c **** 	short string_index;
+  15:../src/myString.c **** 	short result_index;
+  16:../src/myString.c **** 	char tmp_pos;
+  17:../src/myString.c **** 
+  18:../src/myString.c **** 	string_index=0;
+  66                             		.loc 1 18 0
+  67 0002 F6                      		clrw	ax
+  68 0003 B8 04                   		movw	[sp+4], ax
+  19:../src/myString.c **** 	result_index=0;
+  69                             		.loc 1 19 0
+  70 0005 F6                      		clrw	ax
+  71 0006 B8 02                   		movw	[sp+2], ax
+  20:../src/myString.c **** 	tmp_pos=0;
+  72                             		.loc 1 20 0
+  73 0008 F1                      		clrb	a
+  74 0009 98 01                   		mov	[sp+1], a
+  21:../src/myString.c **** 	p_size--;
+  75                             		.loc 1 21 0
+  76 000b 88 0E                   		mov	a, [sp+14]
+  77 000d 9D F0                   		mov	r8, a
+  78 000f 91                      		dec	a
+  79 0010 98 0E                   		mov	[sp+14], a
+  22:../src/myString.c **** 	while(p_str[string_index]!=0){
+  80                             		.loc 1 22 0
+  81 0012 EC C0 00 00             		br	!!.L2
+  82                             	.L7:
+  23:../src/myString.c **** 		if(p_str[string_index]==p_char){
+  83                             		.loc 1 23 0
+  84 0016 A8 04                   		movw	ax, [sp+4]
+  85 0018 BD F0                   		movw	r8, ax
+  86 001a A8 0A                   		movw	ax, [sp+10]
+  87 001c 06 F0                   		addw	ax, r8
+  88 001e BD F0                   		movw	r8, ax
+  89 0020 BD F2                   		movw	r10, ax
+  90 0022 FA F2                   		movw	hl, r10
+  91 0024 8B                      		mov	a, [hl]
+  92 0025 9D F1                   		mov	r9, a
+  93 0027 88 10                   		mov	a, [sp+16]
+  94 0029 9D F0                   		mov	r8, a
+  95 002b 8D F1                   		mov	a, r9
+  96 002d 4B F0                   		cmp	a, r8
+  97 002f 61 E8                   		 skz
+  98 0031 EC 55 00 00             		 br	!!.L3
+  24:../src/myString.c **** 
+  25:../src/myString.c **** 			if(tmp_pos==p_pos)break;
+  99                             		.loc 1 25 0
+ 100 0035 88 12                   		mov	a, [sp+18]
+ 101 0037 9D F0                   		mov	r8, a
+ 102 0039 88 01                   		mov	a, [sp+1]
+ 103 003b 4B F0                   		cmp	a, r8
+ 104 003d 61 E8                   		 skz
+ 105 003f EC 47 00 00             		 br	!!.L4
+ 106 0043 EC D9 00 00             		br	!!.L5
+ 107                             	.L4:
+  26:../src/myString.c **** 			tmp_pos++;
+ 108                             		.loc 1 26 0
+ 109 0047 88 01                   		mov	a, [sp+1]
+ 110 0049 9D F0                   		mov	r8, a
+ 111 004b 81                      		inc	a
+ 112 004c 98 01                   		mov	[sp+1], a
+  27:../src/myString.c **** 			result_index=0;
+ 113                             		.loc 1 27 0
+ 114 004e F6                      		clrw	ax
+ 115 004f B8 02                   		movw	[sp+2], ax
+ 116 0051 EC B6 00 00             		br	!!.L6
+ 117                             	.L3:
+  28:../src/myString.c **** 		}else{
+  29:../src/myString.c **** 			if(p_str[string_index]>=' '){
+ 118                             		.loc 1 29 0
+ 119 0055 A8 04                   		movw	ax, [sp+4]
+ 120 0057 BD F0                   		movw	r8, ax
+ 121 0059 A8 0A                   		movw	ax, [sp+10]
+ 122 005b 06 F0                   		addw	ax, r8
+ 123 005d BD F0                   		movw	r8, ax
+ 124 005f BD F4                   		movw	r12, ax
+ 125 0061 FA F4                   		movw	hl, r12
+ 126 0063 8B                      		mov	a, [hl]
+ 127 0064 9D F0                   		mov	r8, a
+ 128 0066 4A F0 1F                		cmp	r8, #31
+ 129 0069 61 E3                   		 skh
+ 130 006b EC B6 00 00             		 br	!!.L6
+  30:../src/myString.c **** 				p_result[result_index]=p_str[string_index];
+ 131                             		.loc 1 30 0
+ 132 006f A8 02                   		movw	ax, [sp+2]
+ 133 0071 BD F0                   		movw	r8, ax
+ 134 0073 A8 0C                   		movw	ax, [sp+12]
+ 135 0075 06 F0                   		addw	ax, r8
+ 136 0077 BD F0                   		movw	r8, ax
+ 137 0079 A8 04                   		movw	ax, [sp+4]
+ 138 007b BD F2                   		movw	r10, ax
+ 139 007d A8 0A                   		movw	ax, [sp+10]
+ 140 007f 06 F2                   		addw	ax, r10
+ 141 0081 BD F2                   		movw	r10, ax
+ 142 0083 BD F4                   		movw	r12, ax
+ 143 0085 FA F4                   		movw	hl, r12
+ 144 0087 8B                      		mov	a, [hl]
+ 145 0088 9D F2                   		mov	r10, a
+ 146 008a AD F0                   		movw	ax, r8
+ 147 008c BD F4                   		movw	r12, ax
+ 148 008e EA F4                   		movw	de, r12
+ 149 0090 8D F2                   		mov	a, r10
+ 150 0092 99                      		mov	[de], a
+  31:../src/myString.c **** 				if(result_index<p_size)result_index++;
+ 151                             		.loc 1 31 0
+ 152 0093 88 0E                   		mov	a, [sp+14]
+ 153 0095 31 8E                   		shrw	ax, 8
+ 154 0097 BD F2                   		movw	r10, ax
+ 155 0099 A8 02                   		movw	ax, [sp+2]
+ 156 009b BD F0                   		movw	r8, ax
+ 157 009d AD F2                   		movw	ax, r10
+ 158 009f 46 F0                   		cmpw	ax, r8
+ 159 00a1 71 FF                   		 xor1	CY, a.7
+ 160 00a3 71 77 F1                		 xor1	CY, r9.7
+ 161 00a6 61 E3                   		 skh
+ 162 00a8 EC B6 00 00             		 br	!!.L6
+ 163                             		.loc 1 31 0 is_stmt 0 discriminator 1
+ 164 00ac A8 02                   		movw	ax, [sp+2]
+ 165 00ae BD F0                   		movw	r8, ax
+ 166 00b0 A6 F0                   		incw	r8
+ 167 00b2 AD F0                   		movw	ax, r8
+ 168 00b4 B8 02                   		movw	[sp+2], ax
+ 169                             	.L6:
+  32:../src/myString.c **** 			}
+  33:../src/myString.c **** 		}
+  34:../src/myString.c **** 		string_index++;
+ 170                             		.loc 1 34 0 is_stmt 1
+ 171 00b6 A8 04                   		movw	ax, [sp+4]
+ 172 00b8 BD F0                   		movw	r8, ax
+ 173 00ba A6 F0                   		incw	r8
+ 174 00bc AD F0                   		movw	ax, r8
+ 175 00be B8 04                   		movw	[sp+4], ax
+ 176                             	.L2:
+  22:../src/myString.c **** 		if(p_str[string_index]==p_char){
+ 177                             		.loc 1 22 0
+ 178 00c0 A8 04                   		movw	ax, [sp+4]
+ 179 00c2 BD F0                   		movw	r8, ax
+ 180 00c4 A8 0A                   		movw	ax, [sp+10]
+ 181 00c6 06 F0                   		addw	ax, r8
+ 182 00c8 BD F0                   		movw	r8, ax
+ 183 00ca BD F2                   		movw	r10, ax
+ 184 00cc FA F2                   		movw	hl, r10
+ 185 00ce 8B                      		mov	a, [hl]
+ 186 00cf 9D F0                   		mov	r8, a
+ 187 00d1 D4 F0                   		cmp0	r8
+ 188 00d3 61 E8                   		 skz
+ 189 00d5 EC 16 00 00             		 br	!!.L7
+ 190                             	.L5:
+  35:../src/myString.c **** 	}
+  36:../src/myString.c **** 	if(tmp_pos!=p_pos){
+ 191                             		.loc 1 36 0
+ 192 00d9 88 12                   		mov	a, [sp+18]
+ 193 00db 9D F0                   		mov	r8, a
+ 194 00dd 88 01                   		mov	a, [sp+1]
+ 195 00df 4B F0                   		cmp	a, r8
+ 196 00e1 61 F8                   		 sknz
+ 197 00e3 EC EF 00 00             		 br	!!.L8
+  37:../src/myString.c **** 		result_index=0;
+ 198                             		.loc 1 37 0
+ 199 00e7 F6                      		clrw	ax
+ 200 00e8 B8 02                   		movw	[sp+2], ax
+  38:../src/myString.c **** 		string_index=-1;
+ 201                             		.loc 1 38 0
+ 202 00ea 30 FF FF                		movw	ax, #-1
+ 203 00ed B8 04                   		movw	[sp+4], ax
+ 204                             	.L8:
+  39:../src/myString.c **** 	}
+  40:../src/myString.c **** 	p_result[result_index]=0;
+ 205                             		.loc 1 40 0
+ 206 00ef A8 02                   		movw	ax, [sp+2]
+ 207 00f1 BD F0                   		movw	r8, ax
+ 208 00f3 A8 0C                   		movw	ax, [sp+12]
+ 209 00f5 06 F0                   		addw	ax, r8
+ 210 00f7 BD F0                   		movw	r8, ax
+ 211 00f9 BD F4                   		movw	r12, ax
+ 212 00fb EA F4                   		movw	de, r12
+ 213 00fd F1                      		clrb	a
+ 214 00fe 99                      		mov	[de], a
+  41:../src/myString.c **** 
+  42:../src/myString.c **** 	return string_index;
+ 215                             		.loc 1 42 0
+ 216 00ff A8 04                   		movw	ax, [sp+4]
+ 217 0101 BD F0                   		movw	r8, ax
+  43:../src/myString.c **** }
+ 218                             		.loc 1 43 0
+ 219 0103 10 06                   		addw	sp, #6
+ 220 0105 D7                      		ret
+ 221                             	.LFE0:
+ 223                             		.global	_myLongStr
+ 225                             	_myLongStr:
+ 226                             	.LFB1:
+  44:../src/myString.c **** 
+  45:../src/myString.c **** 
+  46:../src/myString.c **** void myLongStr(signed long p_val,char *p_dest,short p_size,char p_base){
+ 227                             		.loc 1 46 0
+ 228                             		; start of function
+ 229                             		; push 4: r16 r18
+ 230                             		; locals: 32 bytes
+ 231 0106 61 EF                   		sel	rb2
+ 232 0108 C1                      		push	ax ; r16
+ 233                             	.LCFI1:
+ 234 0109 C3                      		push	bc ; r18
+ 235                             	.LCFI2:
+ 236 010a 61 CF                   		sel	rb0
+ 237 010c 20 20                   		subw	sp, #32
+ 238                             	.LCFI3:
+  47:../src/myString.c **** 
+  48:../src/myString.c **** 	unsigned long tmp_index;
+  49:../src/myString.c **** 	short tmp_size;
+  50:../src/myString.c **** 	char tmp_val;
+  51:../src/myString.c **** 	char tmp_iszero;
+  52:../src/myString.c **** 
+  53:../src/myString.c **** 	tmp_size=0;
+ 239                             		.loc 1 53 0
+ 240 010e F6                      		clrw	ax
+ 241 010f B8 1A                   		movw	[sp+26], ax
+  54:../src/myString.c **** 	tmp_iszero=1;
+ 242                             		.loc 1 54 0
+ 243 0111 E1                      		oneb	a
+ 244 0112 98 19                   		mov	[sp+25], a
+  55:../src/myString.c **** 
+  56:../src/myString.c **** 	if(p_base==10){
+ 245                             		.loc 1 56 0
+ 246 0114 88 30                   		mov	a, [sp+48]
+ 247 0116 4C 0A                   		cmp	a, #10
+ 248 0118 61 E8                   		 skz
+ 249 011a EC C3 02 00             		 br	!!.L11
+  57:../src/myString.c **** 		tmp_index=1000000000;
+ 250                             		.loc 1 57 0
+ 251 011e 30 00 CA                		movw	ax, #-13824
+ 252 0121 B8 1C                   		movw	[sp+28], ax
+ 253 0123 30 9A 3B                		movw	ax, #15258
+ 254 0126 B8 1E                   		movw	[sp+30], ax
+  58:../src/myString.c **** 
+  59:../src/myString.c **** 		if(p_val<0){
+ 255                             		.loc 1 59 0
+ 256 0128 88 2B                   		mov	a, [sp+43]
+ 257 012a 71 FC                   		 mov1	CY, a.7
+ 258 012c 61 C8                   		 skc
+ 259 012e EC 63 01 00             		 br	!!.L12
+  60:../src/myString.c **** 			p_val*=-1;
+ 260                             		.loc 1 60 0
+ 261 0132 FB F8 FF                		movw	hl, sp
+ 262 0135 30 00 00                		movw ax,#0
+ 263 0138 61 29 28                		subw ax,[hl+40]
+ 264 013b BC 28                   		movw [hl+40], ax
+ 265 013d 30 00 00                		movw ax,#0
+ 266 0140 61 D8                   		sknc
+ 267 0142 B1                      		decw ax
+ 268 0143 61 29 2A                		subw ax,[hl+42]
+ 269 0146 BC 2A                   		movw [hl+42],ax
+  61:../src/myString.c **** 			p_dest[tmp_size]='-';
+ 270                             		.loc 1 61 0
+ 271 0148 A8 1A                   		movw	ax, [sp+26]
+ 272 014a BD F0                   		movw	r8, ax
+ 273 014c A8 2C                   		movw	ax, [sp+44]
+ 274 014e 06 F0                   		addw	ax, r8
+ 275 0150 BD F0                   		movw	r8, ax
+ 276 0152 BD F2                   		movw	r10, ax
+ 277 0154 EA F2                   		movw	de, r10
+ 278 0156 51 2D                   		mov	a, #45
+ 279 0158 99                      		mov	[de], a
+  62:../src/myString.c **** 			tmp_size++;
+ 280                             		.loc 1 62 0
+ 281 0159 A8 1A                   		movw	ax, [sp+26]
+ 282 015b BD F0                   		movw	r8, ax
+ 283 015d A6 F0                   		incw	r8
+ 284 015f AD F0                   		movw	ax, r8
+ 285 0161 B8 1A                   		movw	[sp+26], ax
+ 286                             	.L12:
+  63:../src/myString.c **** 		}
+  64:../src/myString.c **** 
+  65:../src/myString.c **** 		while(tmp_index>0){
+ 287                             		.loc 1 65 0
+ 288 0163 EC AD 02 00             		br	!!.L13
+ 289                             	.L17:
+  66:../src/myString.c **** 			tmp_val=p_val/tmp_index;
+ 290                             		.loc 1 66 0
+ 291 0167 A8 28                   		movw	ax, [sp+40]
+ 292 0169 BD E8                   		movw	r16, ax
+ 293 016b A8 2A                   		movw	ax, [sp+42]
+ 294 016d BD EA                   		movw	r18, ax
+ 295 016f A8 1C                   		movw	ax, [sp+28]
+ 296 0171 BD F4                   		movw	r12, ax
+ 297 0173 B8 08                   		movw	[sp+8], ax
+ 298 0175 A8 1E                   		movw	ax, [sp+30]
+ 299 0177 BD F0                   		movw	r8, ax
+ 300 0179 B8 0A                   		movw	[sp+10], ax
+ 301 017b A8 08                   		movw	ax, [sp+8]
+ 302 017d BD F0                   		movw	r8, ax
+ 303 017f A8 0A                   		movw	ax, [sp+10]
+ 304 0181 BD F2                   		movw	r10, ax
+ 305                             		; G13 udivsi macro r12 = r16 / r8 
+ 306 0183 51 C0                   		mov	a, #0xC0	; Set DIVMODE=1 and MACMODE=1 
+ 307 0185 9F E8 00                		mov	!MDUC, a	; This preps the peripheral for division without interrupt generation 
+ 308 0188 AD EA                   		movw	ax, r18		
+ 309 018a BE F2                   		movw	MDAH, ax	; MDAH 
+ 310 018c AD E8                   		movw	ax, r16		
+ 311 018e BE F0                   		movw	MDAL, ax	; MDAL 
+ 312 0190 AD F2                   		movw	ax, r10		
+ 313 0192 BE F4                   		movw	MDBH, ax	; MDBH 
+ 314 0194 AD F0                   		movw	ax, r8		
+ 315 0196 BE F6                   		movw	MDBL, ax	; MDBL 
+ 316 0198 51 C1                   		mov	a, #0xC1	; Set the DIVST bit in MDUC 
+ 317 019a 9F E8 00                		mov	!MDUC, a	; This starts the division op 
+ 318 019d 8F E8 00                	1:	mov	a, !MDUC	; Wait 16 clocks or until DIVST is clear 
+ 319 01a0 31 03 FA                		bt	a.0, $1b	
+ 320 01a3 AE F0                   		movw    ax, MDAL	; Read the quotient 
+ 321 01a5 BD F4                   		movw	r12, ax		
+ 322 01a7 AE F2                   		movw    ax, MDAH	
+ 323 01a9 BD F6                   		movw	r14, ax		
+ 324                             		; end of udivsi macro
+ 325 01ab AD F4                   		movw	ax, r12
+ 326 01ad B8 14                   		movw	[sp+20], ax
+ 327 01af AD F6                   		movw	ax, r14
+ 328 01b1 B8 16                   		movw	[sp+22], ax
+ 329 01b3 88 14                   		mov	a, [sp+20]
+ 330 01b5 98 18                   		mov	[sp+24], a
+  67:../src/myString.c **** 			if(tmp_val>0)tmp_iszero=0;
+ 331                             		.loc 1 67 0
+ 332 01b7 D1                      		cmp0	a
+ 333 01b8 61 F8                   		 sknz
+ 334 01ba EC C1 01 00             		 br	!!.L14
+ 335                             		.loc 1 67 0 is_stmt 0 discriminator 1
+ 336 01be F1                      		clrb	a
+ 337 01bf 98 19                   		mov	[sp+25], a
+ 338                             	.L14:
+  68:../src/myString.c **** 			if(tmp_iszero==0){
+ 339                             		.loc 1 68 0 is_stmt 1
+ 340 01c1 88 19                   		mov	a, [sp+25]
+ 341 01c3 D1                      		cmp0	a
+ 342 01c4 61 E8                   		 skz
+ 343 01c6 EC ED 01 00             		 br	!!.L15
+  69:../src/myString.c **** 				p_dest[tmp_size]=tmp_val+0x30;
+ 344                             		.loc 1 69 0
+ 345 01ca A8 1A                   		movw	ax, [sp+26]
+ 346 01cc BD F0                   		movw	r8, ax
+ 347 01ce A8 2C                   		movw	ax, [sp+44]
+ 348 01d0 06 F0                   		addw	ax, r8
+ 349 01d2 BD F0                   		movw	r8, ax
+ 350 01d4 88 18                   		mov	a, [sp+24]
+ 351 01d6 0C 30                   		add	a, #48
+ 352 01d8 9D F2                   		mov	r10, a
+ 353 01da AD F0                   		movw	ax, r8
+ 354 01dc BD F4                   		movw	r12, ax
+ 355 01de EA F4                   		movw	de, r12
+ 356 01e0 8D F2                   		mov	a, r10
+ 357 01e2 99                      		mov	[de], a
+  70:../src/myString.c **** 				tmp_size++;
+ 358                             		.loc 1 70 0
+ 359 01e3 A8 1A                   		movw	ax, [sp+26]
+ 360 01e5 BD F0                   		movw	r8, ax
+ 361 01e7 A6 F0                   		incw	r8
+ 362 01e9 AD F0                   		movw	ax, r8
+ 363 01eb B8 1A                   		movw	[sp+26], ax
+ 364                             	.L15:
+  71:../src/myString.c **** 			}
+  72:../src/myString.c **** 			p_val=p_val-(tmp_val*tmp_index);
+ 365                             		.loc 1 72 0
+ 366 01ed A8 28                   		movw	ax, [sp+40]
+ 367 01ef BD F0                   		movw	r8, ax
+ 368 01f1 B8 10                   		movw	[sp+16], ax
+ 369 01f3 A8 2A                   		movw	ax, [sp+42]
+ 370 01f5 BD F2                   		movw	r10, ax
+ 371 01f7 B8 12                   		movw	[sp+18], ax
+ 372 01f9 88 18                   		mov	a, [sp+24]
+ 373 01fb 9D F0                   		mov	r8, a
+ 374 01fd 98 0C                   		mov	[sp+12], a
+ 375 01ff F1                      		clrb	a
+ 376 0200 98 0D                   		mov	[sp+13], a
+ 377 0202 F1                      		clrb	a
+ 378 0203 98 0E                   		mov	[sp+14], a
+ 379 0205 F1                      		clrb	a
+ 380 0206 98 0F                   		mov	[sp+15], a
+ 381 0208 CF E8 00 00             		mov	!0xf00e8, #0
+ 382 020c A8 0C                   		movw	ax, [sp+12]
+ 383 020e BE F0                   		movw	0xffff0, ax
+ 384 0210 A8 1C                   		movw	ax, [sp+28]
+ 385 0212 BE F2                   		movw	0xffff2, ax
+ 386 0214 00                      		nop
+ 387 0215 AE F6                   		movw	ax, 0xffff6
+ 388 0217 12                      		movw	bc, ax
+ 389 0218 CF E8 00 40             		mov	!0xf00e8, #0x40
+ 390 021c AE F4                   		movw	ax, 0xffff4
+ 391 021e BF E0 00                		movw	!0xf00e0, ax
+ 392                             		;clrw	ax
+ 393                             		;movw	!0xf00e2, ax
+ 394 0221 A8 0E                   		movw	ax, [sp+14]
+ 395 0223 BE F0                   		movw	0xffff0, ax
+ 396 0225 A8 1C                   		movw	ax, [sp+28]
+ 397 0227 BE F2                   		movw	0xffff2, ax
+ 398 0229 00                      		nop
+ 399 022a A8 0C                   		movw	ax, [sp+12]
+ 400 022c BE F0                   		movw	0xffff0, ax
+ 401 022e A8 1E                   		movw	ax, [sp+30]
+ 402 0230 BE F2                   		movw	0xffff2, ax
+ 403 0232 13                      		movw	ax, bc
+ 404 0233 BD F0                   		movw	r8, ax
+ 405 0235 AF E0 00                		movw	ax, !0xf00e0
+ 406 0238 BD F2                   		movw	r10, ax ;mulsi3_g13 r8,[sp+12],[sp+28]
+ 407 023a A8 10                   		movw ax,[sp+16]
+ 408 023c 26 F0                   		subw ax,r8
+ 409 023e BD F4                   		movw r12, ax
+ 410 0240 A8 12                   		movw ax,[sp+18]
+ 411 0242 61 D8                   		sknc
+ 412 0244 B1                      		decw ax
+ 413 0245 26 F2                   		subw ax,r10
+ 414 0247 BD F6                   		movw r14,ax
+ 415 0249 AD F4                   		movw	ax, r12
+ 416 024b B8 28                   		movw	[sp+40], ax
+ 417 024d AD F6                   		movw	ax, r14
+ 418 024f B8 2A                   		movw	[sp+42], ax
+  73:../src/myString.c **** 			tmp_index/=10;
+ 419                             		.loc 1 73 0
+ 420 0251 A8 1C                   		movw	ax, [sp+28]
+ 421 0253 BD F4                   		movw	r12, ax
+ 422 0255 B8 04                   		movw	[sp+4], ax
+ 423 0257 A8 1E                   		movw	ax, [sp+30]
+ 424 0259 BD F0                   		movw	r8, ax
+ 425 025b B8 06                   		movw	[sp+6], ax
+ 426 025d A8 06                   		movw	ax, [sp+6]
+ 427 025f C1                      		push	ax
+ 428 0260 A8 06                   		movw	ax, [sp+6]
+ 429 0262 C1                      		push	ax
+ 430 0263 32 CC CC                		movw	bc, #-13108
+ 431 0266 30 CD CC                		movw	ax, #52429
+ 432 0269 FC 00 00 00             		call	!!___umulsi3_highpart
+ 433 026d 10 04                   		addw	sp, #4
+ 434 026f BD F0                   		movw	r8, ax
+ 435 0271 13                      		movw	ax, bc
+ 436 0272 BD F2                   		movw	r10, ax ;umulsi3_highpart_g13 r8,#-858993459,[sp+4]
+ 437 0274 AD F0                   		movw ax,r8 
+ 438 0276 31 5D                   		 shlw ax,5 
+ 439 0278 9D F0                   		 mov r8,a 
+ 440 027a D8 F1                   		 mov x,r9 
+ 441 027c 8D F2                   		 mov a,r10 
+ 442 027e 31 5D                   		 shlw ax,5 
+ 443 0280 9D F1                   		 mov r9,a 
+ 444 0282 AD F2                   		 movw ax,r10 
+ 445 0284 31 3E                   		 shrw ax,3 
+ 446 0286 BD F2                   		 movw r10,ax
+ 447 0288 AD F0                   		movw	ax, r8
+ 448 028a B8 1C                   		movw	[sp+28], ax
+ 449 028c AD F2                   		movw	ax, r10
+ 450 028e B8 1E                   		movw	[sp+30], ax
+  74:../src/myString.c **** 			if(tmp_size>=(p_size-1))break;
+ 451                             		.loc 1 74 0
+ 452 0290 A8 2E                   		movw	ax, [sp+46]
+ 453 0292 B1                      		decw	ax
+ 454 0293 BD F2                   		movw	r10, ax
+ 455 0295 A8 1A                   		movw	ax, [sp+26]
+ 456 0297 BD F0                   		movw	r8, ax
+ 457 0299 AD F2                   		movw	ax, r10
+ 458 029b 46 F0                   		cmpw	ax, r8
+ 459 029d 71 FF                   		 xor1	CY, a.7
+ 460 029f 71 77 F1                		 xor1	CY, r9.7
+ 461 02a2 61 F3                   		 sknh
+ 462 02a4 EC AD 02 00             		 br	!!.L13
+ 463 02a8 00                      		nop
+ 464 02a9 EC 9C 03 00             		br	!!.L18
+ 465                             	.L13:
+  65:../src/myString.c **** 			tmp_val=p_val/tmp_index;
+ 466                             		.loc 1 65 0
+ 467 02ad A8 1E                   		movw	ax, [sp+30]
+ 468 02af 44 00 00                		 cmpw	ax, #0
+ 469 02b2 A8 1C                   		 movw	ax, [sp+28]
+ 470 02b4 61 F8                   		 sknz
+ 471 02b6 44 00 00                		 cmpw	ax, #0
+ 472 02b9 61 E8                   		 skz
+ 473 02bb EC 67 01 00             		 br	!!.L17
+ 474 02bf EC 9C 03 00             		br	!!.L18
+ 475                             	.L11:
+  75:../src/myString.c **** 		}
+  76:../src/myString.c **** 
+  77:../src/myString.c **** 	}
+  78:../src/myString.c **** 	else if(p_base==16){
+ 476                             		.loc 1 78 0
+ 477 02c3 88 30                   		mov	a, [sp+48]
+ 478 02c5 4C 10                   		cmp	a, #16
+ 479 02c7 61 E8                   		 skz
+ 480 02c9 EC 9C 03 00             		 br	!!.L18
+  79:../src/myString.c **** 		tmp_index=32;
+ 481                             		.loc 1 79 0
+ 482 02cd 30 20 00                		movw	ax, #32
+ 483 02d0 B8 1C                   		movw	[sp+28], ax
+ 484 02d2 F6                      		clrw	ax
+ 485 02d3 B8 1E                   		movw	[sp+30], ax
+  80:../src/myString.c **** 		while(tmp_index>0){
+ 486                             		.loc 1 80 0
+ 487 02d5 EC 8A 03 00             		br	!!.L19
+ 488                             	.L24:
+  81:../src/myString.c **** 			tmp_val=(p_val>>(tmp_index-4))&0x0f;
+ 489                             		.loc 1 81 0
+ 490 02d9 A8 1C                   		movw	ax, [sp+28]
+ 491 02db BD F0                   		movw	r8, ax
+ 492 02dd 04 FC FF                		addw	ax, #-4
+ 493 02e0 BD F0                   		movw	r8, ax
+ 494 02e2 8D F0                   		mov a,r8 
+ 495 02e4 74                      		 mov e, a 
+ 496 02e5 A8 2A                   		 movw ax,[sp+42] 
+ 497 02e7 12                      		 movw bc,ax 
+ 498 02e8 A8 28                   		 movw ax,[sp+40] 
+ 499 02ea FC 00 00 00             		 call !!___ashrsi3 
+ 500 02ee BD F0                   		 movw r8,ax 
+ 501 02f0 13                      		 movw ax, bc 
+ 502 02f1 BD F2                   		 movw r10,ax
+ 503 02f3 8D F0                   		mov	a, r8
+ 504 02f5 5C 0F                   		and	a, #15
+ 505 02f7 98 18                   		mov	[sp+24], a
+  82:../src/myString.c **** 
+  83:../src/myString.c **** 			if(tmp_val>0)tmp_iszero=0;
+ 506                             		.loc 1 83 0
+ 507 02f9 61 F8                   		sknz
+ 508 02fb EC 02 03 00             		 br	!!.L20
+ 509                             		 # zero-comparison eliminated
+ 510                             		.loc 1 83 0 is_stmt 0 discriminator 1
+ 511 02ff F1                      		clrb	a
+ 512 0300 98 19                   		mov	[sp+25], a
+ 513                             	.L20:
+  84:../src/myString.c **** 			if(tmp_iszero==0){
+ 514                             		.loc 1 84 0 is_stmt 1
+ 515 0302 88 19                   		mov	a, [sp+25]
+ 516 0304 D1                      		cmp0	a
+ 517 0305 61 E8                   		 skz
+ 518 0307 EC 5F 03 00             		 br	!!.L21
+  85:../src/myString.c **** 				if(tmp_val<=9)p_dest[tmp_size]=tmp_val+0x30;
+ 519                             		.loc 1 85 0
+ 520 030b 88 18                   		mov	a, [sp+24]
+ 521 030d 4C 09                   		cmp	a, #9
+ 522 030f 61 F3                   		 sknh
+ 523 0311 EC 32 03 00             		 br	!!.L22
+ 524                             		.loc 1 85 0 is_stmt 0 discriminator 1
+ 525 0315 A8 1A                   		movw	ax, [sp+26]
+ 526 0317 BD F0                   		movw	r8, ax
+ 527 0319 A8 2C                   		movw	ax, [sp+44]
+ 528 031b 06 F0                   		addw	ax, r8
+ 529 031d BD F0                   		movw	r8, ax
+ 530 031f 88 18                   		mov	a, [sp+24]
+ 531 0321 0C 30                   		add	a, #48
+ 532 0323 9D F2                   		mov	r10, a
+ 533 0325 AD F0                   		movw	ax, r8
+ 534 0327 BD F4                   		movw	r12, ax
+ 535 0329 EA F4                   		movw	de, r12
+ 536 032b 8D F2                   		mov	a, r10
+ 537 032d 99                      		mov	[de], a
+ 538 032e EC 55 03 00             		br	!!.L23
+ 539                             	.L22:
+  86:../src/myString.c **** 				else if(tmp_val>=10)p_dest[tmp_size]=(tmp_val-10)+'A';
+ 540                             		.loc 1 86 0 is_stmt 1
+ 541 0332 88 18                   		mov	a, [sp+24]
+ 542 0334 4C 09                   		cmp	a, #9
+ 543 0336 61 E3                   		 skh
+ 544 0338 EC 55 03 00             		 br	!!.L23
+ 545                             		.loc 1 86 0 is_stmt 0 discriminator 1
+ 546 033c A8 1A                   		movw	ax, [sp+26]
+ 547 033e BD F0                   		movw	r8, ax
+ 548 0340 A8 2C                   		movw	ax, [sp+44]
+ 549 0342 06 F0                   		addw	ax, r8
+ 550 0344 BD F0                   		movw	r8, ax
+ 551 0346 88 18                   		mov	a, [sp+24]
+ 552 0348 0C 37                   		add	a, #55
+ 553 034a 9D F2                   		mov	r10, a
+ 554 034c AD F0                   		movw	ax, r8
+ 555 034e BD F4                   		movw	r12, ax
+ 556 0350 EA F4                   		movw	de, r12
+ 557 0352 8D F2                   		mov	a, r10
+ 558 0354 99                      		mov	[de], a
+ 559                             	.L23:
+  87:../src/myString.c **** 				tmp_size++;
+ 560                             		.loc 1 87 0 is_stmt 1
+ 561 0355 A8 1A                   		movw	ax, [sp+26]
+ 562 0357 BD F0                   		movw	r8, ax
+ 563 0359 A6 F0                   		incw	r8
+ 564 035b AD F0                   		movw	ax, r8
+ 565 035d B8 1A                   		movw	[sp+26], ax
+ 566                             	.L21:
+  88:../src/myString.c **** 			}
+  89:../src/myString.c **** 
+  90:../src/myString.c **** 			tmp_index-=4;
+ 567                             		.loc 1 90 0
+ 568 035f A8 1C                   		movw ax, [sp+28]
+ 569 0361 04 FC FF                		addw ax, #65532
+ 570 0364 B8 1C                   		movw [sp+28], ax
+ 571 0366 A8 1E                   		movw ax, [sp+30]
+ 572 0368 61 D8                   		sknc
+ 573 036a A1                      		incw ax
+ 574 036b B1                      		decw ax
+ 575 036c B8 1E                   		movw [sp+30],ax
+  91:../src/myString.c **** 			if(tmp_size>=(p_size-1))break;
+ 576                             		.loc 1 91 0
+ 577 036e A8 2E                   		movw	ax, [sp+46]
+ 578 0370 B1                      		decw	ax
+ 579 0371 BD F2                   		movw	r10, ax
+ 580 0373 A8 1A                   		movw	ax, [sp+26]
+ 581 0375 BD F0                   		movw	r8, ax
+ 582 0377 AD F2                   		movw	ax, r10
+ 583 0379 46 F0                   		cmpw	ax, r8
+ 584 037b 71 FF                   		 xor1	CY, a.7
+ 585 037d 71 77 F1                		 xor1	CY, r9.7
+ 586 0380 61 F3                   		 sknh
+ 587 0382 EC 8A 03 00             		 br	!!.L19
+ 588 0386 EC 9C 03 00             		br	!!.L18
+ 589                             	.L19:
+  80:../src/myString.c **** 			tmp_val=(p_val>>(tmp_index-4))&0x0f;
+ 590                             		.loc 1 80 0
+ 591 038a A8 1E                   		movw	ax, [sp+30]
+ 592 038c 44 00 00                		 cmpw	ax, #0
+ 593 038f A8 1C                   		 movw	ax, [sp+28]
+ 594 0391 61 F8                   		 sknz
+ 595 0393 44 00 00                		 cmpw	ax, #0
+ 596 0396 61 E8                   		 skz
+ 597 0398 EC D9 02 00             		 br	!!.L24
+ 598                             	.L18:
+  92:../src/myString.c **** 		}
+  93:../src/myString.c **** 
+  94:../src/myString.c **** 	}
+  95:../src/myString.c **** 
+  96:../src/myString.c **** 	if(tmp_iszero==1){
+ 599                             		.loc 1 96 0
+ 600 039c 88 19                   		mov	a, [sp+25]
+ 601 039e 4C 01                   		cmp	a, #1
+ 602 03a0 61 E8                   		 skz
+ 603 03a2 EC C1 03 00             		 br	!!.L25
+  97:../src/myString.c **** 		p_dest[tmp_size]='0';
+ 604                             		.loc 1 97 0
+ 605 03a6 A8 1A                   		movw	ax, [sp+26]
+ 606 03a8 BD F0                   		movw	r8, ax
+ 607 03aa A8 2C                   		movw	ax, [sp+44]
+ 608 03ac 06 F0                   		addw	ax, r8
+ 609 03ae BD F0                   		movw	r8, ax
+ 610 03b0 BD F2                   		movw	r10, ax
+ 611 03b2 EA F2                   		movw	de, r10
+ 612 03b4 51 30                   		mov	a, #48
+ 613 03b6 99                      		mov	[de], a
+  98:../src/myString.c **** 		tmp_size++;
+ 614                             		.loc 1 98 0
+ 615 03b7 A8 1A                   		movw	ax, [sp+26]
+ 616 03b9 BD F0                   		movw	r8, ax
+ 617 03bb A6 F0                   		incw	r8
+ 618 03bd AD F0                   		movw	ax, r8
+ 619 03bf B8 1A                   		movw	[sp+26], ax
+ 620                             	.L25:
+  99:../src/myString.c **** 	}
+ 100:../src/myString.c **** 
+ 101:../src/myString.c **** 	p_dest[tmp_size]=0;
+ 621                             		.loc 1 101 0
+ 622 03c1 A8 1A                   		movw	ax, [sp+26]
+ 623 03c3 BD F0                   		movw	r8, ax
+ 624 03c5 A8 2C                   		movw	ax, [sp+44]
+ 625 03c7 06 F0                   		addw	ax, r8
+ 626 03c9 BD F0                   		movw	r8, ax
+ 627 03cb BD F4                   		movw	r12, ax
+ 628 03cd EA F4                   		movw	de, r12
+ 629 03cf F1                      		clrb	a
+ 630 03d0 99                      		mov	[de], a
+ 102:../src/myString.c **** }
+ 631                             		.loc 1 102 0
+ 632 03d1 10 20                   		addw	sp, #32
+ 633 03d3 61 EF                   		sel	rb2
+ 634 03d5 C2                      		pop	bc ; r18
+ 635 03d6 C0                      		pop	ax ; r16
+ 636 03d7 61 CF                   		sel	rb0
+ 637 03d9 D7                      		ret
+ 638                             	.LFE1:
+ 640                             		.global	_myStrLong
+ 642                             	_myStrLong:
+ 643                             	.LFB2:
+ 103:../src/myString.c **** 
+ 104:../src/myString.c **** long myStrLong(char *p_str,char p_base){
+ 644                             		.loc 1 104 0
+ 645                             		; start of function
+ 646                             		; push 4: r16 r18
+ 647                             		; locals: 28 bytes
+ 648 03da 61 EF                   		sel	rb2
+ 649 03dc C1                      		push	ax ; r16
+ 650                             	.LCFI4:
+ 651 03dd C3                      		push	bc ; r18
+ 652                             	.LCFI5:
+ 653 03de 61 CF                   		sel	rb0
+ 654 03e0 20 1C                   		subw	sp, #28
+ 655                             	.LCFI6:
+ 105:../src/myString.c **** 	long tmp_long;
+ 106:../src/myString.c **** 	tmp_long=0;
+ 656                             		.loc 1 106 0
+ 657 03e2 F6                      		clrw	ax
+ 658 03e3 B8 18                   		movw	[sp+24], ax
+ 659 03e5 F6                      		clrw	ax
+ 660 03e6 B8 1A                   		movw	[sp+26], ax
+ 107:../src/myString.c **** 	if(p_base==10){
+ 661                             		.loc 1 107 0
+ 662 03e8 88 26                   		mov	a, [sp+38]
+ 663 03ea 4C 0A                   		cmp	a, #10
+ 664 03ec 61 E8                   		 skz
+ 665 03ee EC BA 04 00             		 br	!!.L27
+ 108:../src/myString.c **** 		while(*p_str != 0){
+ 666                             		.loc 1 108 0
+ 667 03f2 EC A3 04 00             		br	!!.L28
+ 668                             	.L30:
+ 109:../src/myString.c **** 			if((*p_str>='0')&&(*p_str<='9')){
+ 669                             		.loc 1 109 0
+ 670 03f6 A8 24                   		movw	ax, [sp+36]
+ 671 03f8 BD F0                   		movw	r8, ax
+ 672 03fa BD F2                   		movw	r10, ax
+ 673 03fc FA F2                   		movw	hl, r10
+ 674 03fe 8B                      		mov	a, [hl]
+ 675 03ff 9D F0                   		mov	r8, a
+ 676 0401 4A F0 2F                		cmp	r8, #47
+ 677 0404 61 E3                   		 skh
+ 678 0406 EC 9E 04 00             		 br	!!.L29
+ 679                             		.loc 1 109 0 is_stmt 0 discriminator 1
+ 680 040a A8 24                   		movw	ax, [sp+36]
+ 681 040c BD F0                   		movw	r8, ax
+ 682 040e BD F2                   		movw	r10, ax
+ 683 0410 FA F2                   		movw	hl, r10
+ 684 0412 8B                      		mov	a, [hl]
+ 685 0413 9D F0                   		mov	r8, a
+ 686 0415 4A F0 39                		cmp	r8, #57
+ 687 0418 61 F3                   		 sknh
+ 688 041a EC 9E 04 00             		 br	!!.L29
+ 110:../src/myString.c **** 				tmp_long*=10;
+ 689                             		.loc 1 110 0 is_stmt 1
+ 690 041e A8 18                   		movw	ax, [sp+24]
+ 691 0420 BD E8                   		movw	r16, ax
+ 692 0422 A8 1A                   		movw	ax, [sp+26]
+ 693 0424 BD EA                   		movw	r18, ax
+ 694 0426 AD E8                   		movw	ax, r16
+ 695 0428 BD F4                   		movw	r12, ax
+ 696 042a AD EA                   		movw	ax, r18
+ 697 042c BD F6                   		movw	r14, ax
+ 698 042e AD F6                   		movw ax,r14 
+ 699 0430 31 2D                   		 shlw ax,2 
+ 700 0432 9D F7                   		 mov r15,a 
+ 701 0434 D8 F5                   		 mov x,r13 
+ 702 0436 8D F6                   		 mov a, r14 
+ 703 0438 31 2D                   		 shlw ax,2 
+ 704 043a 9D F6                   		 mov r14,a 
+ 705 043c AD F4                   		 movw ax,r12 
+ 706 043e 31 2D                   		 shlw ax,2 
+ 707 0440 BD F4                   		 movw r12,ax
+ 708 0442 AD F4                   		movw ax, r12
+ 709 0444 06 E8                   		addw ax, r16
+ 710 0446 BD F4                   		movw r12, ax
+ 711 0448 AD F6                   		movw ax, r14
+ 712 044a 61 D8                   		sknc
+ 713 044c A1                      		incw ax
+ 714 044d 06 EA                   		addw ax, r18
+ 715 044f BD F6                   		movw r14,ax
+ 716 0451 AD F4                   		movw ax,r12 
+ 717 0453 01                      		 addw ax,ax 
+ 718 0454 BD F0                   		 movw r8,ax 
+ 719 0456 AD F6                   		 movw ax,r14 
+ 720 0458 61 EE                   		 rolwc ax,1 
+ 721 045a BD F2                   		 movw r10,ax
+ 722 045c AD F0                   		movw	ax, r8
+ 723 045e BD F4                   		movw	r12, ax
+ 724 0460 AD F2                   		movw	ax, r10
+ 725 0462 BD F6                   		movw	r14, ax
+ 726 0464 AD F4                   		movw	ax, r12
+ 727 0466 B8 18                   		movw	[sp+24], ax
+ 728 0468 AD F6                   		movw	ax, r14
+ 729 046a B8 1A                   		movw	[sp+26], ax
+ 111:../src/myString.c **** 				tmp_long+=*p_str-0x30;
+ 730                             		.loc 1 111 0
+ 731 046c A8 24                   		movw	ax, [sp+36]
+ 732 046e BD F0                   		movw	r8, ax
+ 733 0470 BD F2                   		movw	r10, ax
+ 734 0472 FA F2                   		movw	hl, r10
+ 735 0474 8B                      		mov	a, [hl]
+ 736 0475 9D F0                   		mov	r8, a
+ 737 0477 F4 F1                   		clrb	r9
+ 738 0479 AD F0                   		movw	ax, r8
+ 739 047b 04 D0 FF                		addw	ax, #-48
+ 740 047e BD F0                   		movw	r8, ax
+ 741 0480 B8 14                   		movw	[sp+20], ax
+ 742 0482 31 7B                   		sar	a, 7
+ 743 0484 9D F0                   		mov	r8, a
+ 744 0486 98 16                   		mov	[sp+22], a
+ 745 0488 98 17                   		mov	[sp+23], a
+ 746 048a FB F8 FF                		movw	hl, sp
+ 747 048d A8 18                   		movw ax, [sp+24]
+ 748 048f 61 09 14                		addw ax, [hl+20]
+ 749 0492 B8 18                   		movw [sp+24], ax
+ 750 0494 A8 1A                   		movw ax, [sp+26]
+ 751 0496 61 D8                   		sknc
+ 752 0498 A1                      		incw ax
+ 753 0499 61 09 16                		addw ax, [hl+22]
+ 754 049c B8 1A                   		movw [sp+26],ax
+ 755                             	.L29:
+ 112:../src/myString.c **** 			}
+ 113:../src/myString.c **** 			p_str++;
+ 756                             		.loc 1 113 0
+ 757 049e A8 24                   		movw	ax, [sp+36]
+ 758 04a0 A1                      		incw	ax
+ 759 04a1 B8 24                   		movw	[sp+36], ax
+ 760                             	.L28:
+ 108:../src/myString.c **** 			if((*p_str>='0')&&(*p_str<='9')){
+ 761                             		.loc 1 108 0
+ 762 04a3 A8 24                   		movw	ax, [sp+36]
+ 763 04a5 BD F0                   		movw	r8, ax
+ 764 04a7 BD F2                   		movw	r10, ax
+ 765 04a9 FA F2                   		movw	hl, r10
+ 766 04ab 8B                      		mov	a, [hl]
+ 767 04ac 9D F0                   		mov	r8, a
+ 768 04ae D4 F0                   		cmp0	r8
+ 769 04b0 61 E8                   		 skz
+ 770 04b2 EC F6 03 00             		 br	!!.L30
+ 771 04b6 EC 52 06 00             		br	!!.L31
+ 772                             	.L27:
+ 114:../src/myString.c **** 		}
+ 115:../src/myString.c **** 	}
+ 116:../src/myString.c **** 	else if(p_base==16){
+ 773                             		.loc 1 116 0
+ 774 04ba 88 26                   		mov	a, [sp+38]
+ 775 04bc 4C 10                   		cmp	a, #16
+ 776 04be 61 E8                   		 skz
+ 777 04c0 EC 52 06 00             		 br	!!.L31
+ 117:../src/myString.c **** 		while(*p_str != 0){
+ 778                             		.loc 1 117 0
+ 779 04c4 EC 3F 06 00             		br	!!.L32
+ 780                             	.L36:
+ 118:../src/myString.c **** 			if(*p_str>='0'){
+ 781                             		.loc 1 118 0
+ 782 04c8 A8 24                   		movw	ax, [sp+36]
+ 783 04ca BD F0                   		movw	r8, ax
+ 784 04cc BD F2                   		movw	r10, ax
+ 785 04ce FA F2                   		movw	hl, r10
+ 786 04d0 8B                      		mov	a, [hl]
+ 787 04d1 9D F0                   		mov	r8, a
+ 788 04d3 4A F0 2F                		cmp	r8, #47
+ 789 04d6 61 E3                   		 skh
+ 790 04d8 EC 3A 06 00             		 br	!!.L33
+ 119:../src/myString.c **** 				tmp_long=tmp_long<<4;
+ 791                             		.loc 1 119 0
+ 792 04dc A8 1A                   		movw ax,[sp+26] 
+ 793 04de 31 4D                   		 shlw ax,4 
+ 794 04e0 98 1B                   		 mov [sp+27],a 
+ 795 04e2 88 19                   		 mov a,[sp+25] 
+ 796 04e4 70                      		 mov x,a 
+ 797 04e5 88 1A                   		 mov a, [sp+26] 
+ 798 04e7 31 4D                   		 shlw ax,4 
+ 799 04e9 98 1A                   		 mov [sp+26],a 
+ 800 04eb A8 18                   		 movw ax,[sp+24] 
+ 801 04ed 31 4D                   		 shlw ax,4 
+ 802 04ef B8 18                   		 movw [sp+24],ax
+ 120:../src/myString.c **** 				if((*p_str>='0')&&(*p_str<='9'))tmp_long|=*p_str-'0';
+ 803                             		.loc 1 120 0
+ 804 04f1 A8 24                   		movw	ax, [sp+36]
+ 805 04f3 BD F0                   		movw	r8, ax
+ 806 04f5 BD F2                   		movw	r10, ax
+ 807 04f7 FA F2                   		movw	hl, r10
+ 808 04f9 8B                      		mov	a, [hl]
+ 809 04fa 9D F0                   		mov	r8, a
+ 810 04fc 4A F0 2F                		cmp	r8, #47
+ 811 04ff 61 E3                   		 skh
+ 812 0501 EC 60 05 00             		 br	!!.L34
+ 813                             		.loc 1 120 0 is_stmt 0 discriminator 1
+ 814 0505 A8 24                   		movw	ax, [sp+36]
+ 815 0507 BD F0                   		movw	r8, ax
+ 816 0509 BD F2                   		movw	r10, ax
+ 817 050b FA F2                   		movw	hl, r10
+ 818 050d 8B                      		mov	a, [hl]
+ 819 050e 9D F0                   		mov	r8, a
+ 820 0510 4A F0 39                		cmp	r8, #57
+ 821 0513 61 F3                   		 sknh
+ 822 0515 EC 60 05 00             		 br	!!.L34
+ 823                             		.loc 1 120 0 discriminator 2
+ 824 0519 A8 24                   		movw	ax, [sp+36]
+ 825 051b BD F0                   		movw	r8, ax
+ 826 051d BD F2                   		movw	r10, ax
+ 827 051f FA F2                   		movw	hl, r10
+ 828 0521 8B                      		mov	a, [hl]
+ 829 0522 9D F0                   		mov	r8, a
+ 830 0524 F4 F1                   		clrb	r9
+ 831 0526 AD F0                   		movw	ax, r8
+ 832 0528 04 D0 FF                		addw	ax, #-48
+ 833 052b BD F0                   		movw	r8, ax
+ 834 052d B8 10                   		movw	[sp+16], ax
+ 835 052f 31 7B                   		sar	a, 7
+ 836 0531 9D F0                   		mov	r8, a
+ 837 0533 98 12                   		mov	[sp+18], a
+ 838 0535 98 13                   		mov	[sp+19], a
+ 839 0537 FB F8 FF                		movw	hl, sp
+ 840 053a A8 18                   		movw	ax, [sp+24]
+ 841 053c 12                      		movw	bc, ax
+ 842 053d AC 10                   		movw	ax, [hl+16]
+ 843 053f 61 63                   		or	b, a
+ 844 0541 62                      		mov	a, c
+ 845 0542 61 60                   		or	x, a
+ 846 0544 63                      		mov	a, b
+ 847 0545 BD F0                   		movw	r8, ax
+ 848 0547 A8 1A                   		movw	ax, [sp+26]
+ 849 0549 12                      		movw	bc, ax
+ 850 054a AC 12                   		movw	ax, [hl+18]
+ 851 054c 61 63                   		or	b, a
+ 852 054e 62                      		mov	a, c
+ 853 054f 61 60                   		or	x, a
+ 854 0551 63                      		mov	a, b
+ 855 0552 BD F2                   		movw	r10, ax ;iorsi3 r8,[sp+24],[hl+16]
+ 856 0554 AD F0                   		movw	ax, r8
+ 857 0556 B8 18                   		movw	[sp+24], ax
+ 858 0558 AD F2                   		movw	ax, r10
+ 859 055a B8 1A                   		movw	[sp+26], ax
+ 860 055c EC 3A 06 00             		br	!!.L33
+ 861                             	.L34:
+ 121:../src/myString.c **** 				else if((*p_str>='a')&&(*p_str<='f'))tmp_long|=(*p_str-'a')+10;
+ 862                             		.loc 1 121 0 is_stmt 1
+ 863 0560 A8 24                   		movw	ax, [sp+36]
+ 864 0562 BD F0                   		movw	r8, ax
+ 865 0564 BD F2                   		movw	r10, ax
+ 866 0566 FA F2                   		movw	hl, r10
+ 867 0568 8B                      		mov	a, [hl]
+ 868 0569 9D F0                   		mov	r8, a
+ 869 056b 4A F0 60                		cmp	r8, #96
+ 870 056e 61 E3                   		 skh
+ 871 0570 EC CF 05 00             		 br	!!.L35
+ 872                             		.loc 1 121 0 is_stmt 0 discriminator 1
+ 873 0574 A8 24                   		movw	ax, [sp+36]
+ 874 0576 BD F0                   		movw	r8, ax
+ 875 0578 BD F2                   		movw	r10, ax
+ 876 057a FA F2                   		movw	hl, r10
+ 877 057c 8B                      		mov	a, [hl]
+ 878 057d 9D F0                   		mov	r8, a
+ 879 057f 4A F0 66                		cmp	r8, #102
+ 880 0582 61 F3                   		 sknh
+ 881 0584 EC CF 05 00             		 br	!!.L35
+ 882                             		.loc 1 121 0 discriminator 2
+ 883 0588 A8 24                   		movw	ax, [sp+36]
+ 884 058a BD F0                   		movw	r8, ax
+ 885 058c BD F2                   		movw	r10, ax
+ 886 058e FA F2                   		movw	hl, r10
+ 887 0590 8B                      		mov	a, [hl]
+ 888 0591 9D F0                   		mov	r8, a
+ 889 0593 F4 F1                   		clrb	r9
+ 890 0595 AD F0                   		movw	ax, r8
+ 891 0597 04 A9 FF                		addw	ax, #-87
+ 892 059a BD F0                   		movw	r8, ax
+ 893 059c B8 0C                   		movw	[sp+12], ax
+ 894 059e 31 7B                   		sar	a, 7
+ 895 05a0 9D F0                   		mov	r8, a
+ 896 05a2 98 0E                   		mov	[sp+14], a
+ 897 05a4 98 0F                   		mov	[sp+15], a
+ 898 05a6 FB F8 FF                		movw	hl, sp
+ 899 05a9 A8 18                   		movw	ax, [sp+24]
+ 900 05ab 12                      		movw	bc, ax
+ 901 05ac AC 0C                   		movw	ax, [hl+12]
+ 902 05ae 61 63                   		or	b, a
+ 903 05b0 62                      		mov	a, c
+ 904 05b1 61 60                   		or	x, a
+ 905 05b3 63                      		mov	a, b
+ 906 05b4 BD F0                   		movw	r8, ax
+ 907 05b6 A8 1A                   		movw	ax, [sp+26]
+ 908 05b8 12                      		movw	bc, ax
+ 909 05b9 AC 0E                   		movw	ax, [hl+14]
+ 910 05bb 61 63                   		or	b, a
+ 911 05bd 62                      		mov	a, c
+ 912 05be 61 60                   		or	x, a
+ 913 05c0 63                      		mov	a, b
+ 914 05c1 BD F2                   		movw	r10, ax ;iorsi3 r8,[sp+24],[hl+12]
+ 915 05c3 AD F0                   		movw	ax, r8
+ 916 05c5 B8 18                   		movw	[sp+24], ax
+ 917 05c7 AD F2                   		movw	ax, r10
+ 918 05c9 B8 1A                   		movw	[sp+26], ax
+ 919 05cb EC 3A 06 00             		br	!!.L33
+ 920                             	.L35:
+ 122:../src/myString.c **** 				else if((*p_str>='A')&&(*p_str<='F'))tmp_long|=(*p_str-'A')+10;
+ 921                             		.loc 1 122 0 is_stmt 1
+ 922 05cf A8 24                   		movw	ax, [sp+36]
+ 923 05d1 BD F0                   		movw	r8, ax
+ 924 05d3 BD F2                   		movw	r10, ax
+ 925 05d5 FA F2                   		movw	hl, r10
+ 926 05d7 8B                      		mov	a, [hl]
+ 927 05d8 9D F0                   		mov	r8, a
+ 928 05da 4A F0 40                		cmp	r8, #64
+ 929 05dd 61 E3                   		 skh
+ 930 05df EC 3A 06 00             		 br	!!.L33
+ 931                             		.loc 1 122 0 is_stmt 0 discriminator 1
+ 932 05e3 A8 24                   		movw	ax, [sp+36]
+ 933 05e5 BD F0                   		movw	r8, ax
+ 934 05e7 BD F2                   		movw	r10, ax
+ 935 05e9 FA F2                   		movw	hl, r10
+ 936 05eb 8B                      		mov	a, [hl]
+ 937 05ec 9D F0                   		mov	r8, a
+ 938 05ee 4A F0 46                		cmp	r8, #70
+ 939 05f1 61 F3                   		 sknh
+ 940 05f3 EC 3A 06 00             		 br	!!.L33
+ 941                             		.loc 1 122 0 discriminator 2
+ 942 05f7 A8 24                   		movw	ax, [sp+36]
+ 943 05f9 BD F0                   		movw	r8, ax
+ 944 05fb BD F2                   		movw	r10, ax
+ 945 05fd FA F2                   		movw	hl, r10
+ 946 05ff 8B                      		mov	a, [hl]
+ 947 0600 9D F0                   		mov	r8, a
+ 948 0602 F4 F1                   		clrb	r9
+ 949 0604 AD F0                   		movw	ax, r8
+ 950 0606 04 C9 FF                		addw	ax, #-55
+ 951 0609 BD F0                   		movw	r8, ax
+ 952 060b B8 08                   		movw	[sp+8], ax
+ 953 060d 31 7B                   		sar	a, 7
+ 954 060f 9D F0                   		mov	r8, a
+ 955 0611 98 0A                   		mov	[sp+10], a
+ 956 0613 98 0B                   		mov	[sp+11], a
+ 957 0615 FB F8 FF                		movw	hl, sp
+ 958 0618 A8 18                   		movw	ax, [sp+24]
+ 959 061a 12                      		movw	bc, ax
+ 960 061b AC 08                   		movw	ax, [hl+8]
+ 961 061d 61 63                   		or	b, a
+ 962 061f 62                      		mov	a, c
+ 963 0620 61 60                   		or	x, a
+ 964 0622 63                      		mov	a, b
+ 965 0623 BD F0                   		movw	r8, ax
+ 966 0625 A8 1A                   		movw	ax, [sp+26]
+ 967 0627 12                      		movw	bc, ax
+ 968 0628 AC 0A                   		movw	ax, [hl+10]
+ 969 062a 61 63                   		or	b, a
+ 970 062c 62                      		mov	a, c
+ 971 062d 61 60                   		or	x, a
+ 972 062f 63                      		mov	a, b
+ 973 0630 BD F2                   		movw	r10, ax ;iorsi3 r8,[sp+24],[hl+8]
+ 974 0632 AD F0                   		movw	ax, r8
+ 975 0634 B8 18                   		movw	[sp+24], ax
+ 976 0636 AD F2                   		movw	ax, r10
+ 977 0638 B8 1A                   		movw	[sp+26], ax
+ 978                             	.L33:
+ 123:../src/myString.c **** 			}
+ 124:../src/myString.c **** 			p_str++;
+ 979                             		.loc 1 124 0 is_stmt 1
+ 980 063a A8 24                   		movw	ax, [sp+36]
+ 981 063c A1                      		incw	ax
+ 982 063d B8 24                   		movw	[sp+36], ax
+ 983                             	.L32:
+ 117:../src/myString.c **** 			if(*p_str>='0'){
+ 984                             		.loc 1 117 0
+ 985 063f A8 24                   		movw	ax, [sp+36]
+ 986 0641 BD F0                   		movw	r8, ax
+ 987 0643 BD F2                   		movw	r10, ax
+ 988 0645 FA F2                   		movw	hl, r10
+ 989 0647 8B                      		mov	a, [hl]
+ 990 0648 9D F0                   		mov	r8, a
+ 991 064a D4 F0                   		cmp0	r8
+ 992 064c 61 E8                   		 skz
+ 993 064e EC C8 04 00             		 br	!!.L36
+ 994                             	.L31:
+ 125:../src/myString.c **** 		}
+ 126:../src/myString.c **** 	}
+ 127:../src/myString.c **** 	return tmp_long;
+ 995                             		.loc 1 127 0
+ 996 0652 A8 18                   		movw	ax, [sp+24]
+ 997 0654 BD F0                   		movw	r8, ax
+ 998 0656 B8 04                   		movw	[sp+4], ax
+ 999 0658 A8 1A                   		movw	ax, [sp+26]
+ 1000 065a BD F2                   		movw	r10, ax
+ 1001 065c B8 06                   		movw	[sp+6], ax
+ 1002 065e A8 04                   		movw	ax, [sp+4]
+ 1003 0660 BD F0                   		movw	r8, ax
+ 1004 0662 B8 00                   		movw	[sp], ax
+ 1005 0664 A8 06                   		movw	ax, [sp+6]
+ 1006 0666 BD F2                   		movw	r10, ax
+ 1007 0668 B8 02                   		movw	[sp+2], ax
+ 128:../src/myString.c **** }
+ 1008                             		.loc 1 128 0
+ 1009 066a A8 00                   		movw	ax, [sp]
+ 1010 066c BD F0                   		movw	r8, ax
+ 1011 066e A8 02                   		movw	ax, [sp+2]
+ 1012 0670 BD F2                   		movw	r10, ax
+ 1013 0672 10 1C                   		addw	sp, #28
+ 1014 0674 61 EF                   		sel	rb2
+ 1015 0676 C2                      		pop	bc ; r18
+ 1016 0677 C0                      		pop	ax ; r16
+ 1017 0678 61 CF                   		sel	rb0
+ 1018 067a D7                      		ret
+ 1019                             	.LFE2:
+ 1099                             	.Letext0:

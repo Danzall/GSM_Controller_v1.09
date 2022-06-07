@@ -1,0 +1,429 @@
+   1                             	r8	=	0xffef0
+   2                             	r16	=	0xffee8
+   3                             	r24	=	0xffee0
+   4                             	r9	=	0xffef1
+   5                             	r17	=	0xffee9
+   6                             	r25	=	0xffee1
+   7                             	r10	=	0xffef2
+   8                             	r18	=	0xffeea
+   9                             	r26	=	0xffee2
+  10                             	r11	=	0xffef3
+  11                             	r19	=	0xffeeb
+  12                             	r27	=	0xffee3
+  13                             	r12	=	0xffef4
+  14                             	r20	=	0xffeec
+  15                             	r28	=	0xffee4
+  16                             	r13	=	0xffef5
+  17                             	r21	=	0xffeed
+  18                             	r29	=	0xffee5
+  19                             	r14	=	0xffef6
+  20                             	r22	=	0xffeee
+  21                             	r30	=	0xffee6
+  22                             	r15	=	0xffef7
+  23                             	r23	=	0xffeef
+  24                             	r31	=	0xffee7
+  25                             	MDUC	=	0xf00e8
+  26                             	MDAL	=	0xffff0
+  27                             	MDAH	=	0xffff2
+  28                             	MDBL	=	0xffff6
+  29                             	MDBH	=	0xffff4
+  30                             	MDCL	=	0xf00e0
+  31                             	MDCH	=	0xf00e2
+  32                             	.text
+  33                             	.Ltext0:
+  34                             		.global	_R_TAU0_Create
+  36                             	_R_TAU0_Create:
+  37                             	.LFB0:
+  38                             		.file 1 "../src/r_cg_timer.c"
+   1:../src/r_cg_timer.c **** /**************************************************************************************************
+   2:../src/r_cg_timer.c **** * DISCLAIMER
+   3:../src/r_cg_timer.c **** * This software is supplied by Renesas Electronics Corporation and is only intended for use with Re
+   4:../src/r_cg_timer.c **** * No other uses are authorized. This software is owned by Renesas Electronics Corporation and is pr
+   5:../src/r_cg_timer.c **** * applicable laws, including copyright laws. 
+   6:../src/r_cg_timer.c **** * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIESREGARDING THIS SOFTWARE, WHETHER
+   7:../src/r_cg_timer.c **** * OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULA
+   8:../src/r_cg_timer.c **** * NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED N
+   9:../src/r_cg_timer.c **** * LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+  10:../src/r_cg_timer.c **** * INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, E
+  11:../src/r_cg_timer.c **** * ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  12:../src/r_cg_timer.c **** * Renesas reserves the right, without notice, to make changes to this software and to discontinue t
+  13:../src/r_cg_timer.c **** * of this software. By using this software, you agree to the additional terms and conditions found 
+  14:../src/r_cg_timer.c **** * following link:
+  15:../src/r_cg_timer.c **** * http://www.renesas.com/disclaimer
+  16:../src/r_cg_timer.c **** *
+  17:../src/r_cg_timer.c **** * Copyright (C) 2011, 2016 Renesas Electronics Corporation. All rights reserved.
+  18:../src/r_cg_timer.c **** ***************************************************************************************************
+  19:../src/r_cg_timer.c **** 
+  20:../src/r_cg_timer.c **** /**************************************************************************************************
+  21:../src/r_cg_timer.c **** * File Name    : r_cg_timer.c
+  22:../src/r_cg_timer.c **** * Version      : CodeGenerator for RL78/G13 V2.03.04.01 [11 Nov 2016]
+  23:../src/r_cg_timer.c **** * Device(s)    : R5F1006C
+  24:../src/r_cg_timer.c **** * Tool-Chain   : GCCRL78
+  25:../src/r_cg_timer.c **** * Description  : This file implements device driver for TAU module.
+  26:../src/r_cg_timer.c **** * Creation Date: 8/7/2018
+  27:../src/r_cg_timer.c **** ***************************************************************************************************
+  28:../src/r_cg_timer.c **** 
+  29:../src/r_cg_timer.c **** /**************************************************************************************************
+  30:../src/r_cg_timer.c **** Includes
+  31:../src/r_cg_timer.c **** ***************************************************************************************************
+  32:../src/r_cg_timer.c **** #include "r_cg_macrodriver.h"
+  33:../src/r_cg_timer.c **** #include "r_cg_timer.h"
+  34:../src/r_cg_timer.c **** /* Start user code for include. Do not edit comment generated here */
+  35:../src/r_cg_timer.c **** /* End user code. Do not edit comment generated here */
+  36:../src/r_cg_timer.c **** #include "r_cg_userdefine.h"
+  37:../src/r_cg_timer.c **** 
+  38:../src/r_cg_timer.c **** /**************************************************************************************************
+  39:../src/r_cg_timer.c **** Global variables and functions
+  40:../src/r_cg_timer.c **** ***************************************************************************************************
+  41:../src/r_cg_timer.c **** /* Start user code for global. Do not edit comment generated here */
+  42:../src/r_cg_timer.c **** /* End user code. Do not edit comment generated here */
+  43:../src/r_cg_timer.c **** 
+  44:../src/r_cg_timer.c **** /**************************************************************************************************
+  45:../src/r_cg_timer.c **** * Function Name: R_TAU0_Create
+  46:../src/r_cg_timer.c **** * Description  : This function initializes the TAU0 module.
+  47:../src/r_cg_timer.c **** * Arguments    : None
+  48:../src/r_cg_timer.c **** * Return Value : None
+  49:../src/r_cg_timer.c **** ***************************************************************************************************
+  50:../src/r_cg_timer.c **** void R_TAU0_Create(void)
+  51:../src/r_cg_timer.c **** {
+  39                             		.loc 1 51 0
+  52:../src/r_cg_timer.c ****     TAU0EN = 1U;    /* supplies input clock */
+  40                             		.loc 1 52 0
+  41 0000 C9 F0 F0 00             		movw	r8, #240
+  42 0004 AD F0                   		movw	ax, r8
+  43 0006 BD F2                   		movw	r10, ax
+  44 0008 FA F2                   		movw	hl, r10
+  45 000a 71 82                   		set1	[hl].0 ;insvmisalignqi [hl],#1,#0,#1 {0}
+  53:../src/r_cg_timer.c ****     TPS0 = _0000_TAU_CKM0_FCLK_0 | _0000_TAU_CKM1_FCLK_0 | _0000_TAU_CKM2_FCLK_1 | _0000_TAU_CKM3_F
+  46                             		.loc 1 53 0
+  47 000c C9 F0 B6 01             		movw	r8, #438
+  48 0010 AD F0                   		movw	ax, r8
+  49 0012 BD F4                   		movw	r12, ax
+  50 0014 EA F4                   		movw	de, r12
+  51 0016 F6                      		clrw	ax
+  52 0017 B9                      		movw	[de], ax
+  54:../src/r_cg_timer.c ****     /* Stop all channels */
+  55:../src/r_cg_timer.c ****     TT0 = _0001_TAU_CH0_STOP_TRG_ON | _0002_TAU_CH1_STOP_TRG_ON | _0004_TAU_CH2_STOP_TRG_ON |
+  53                             		.loc 1 55 0
+  54 0018 C9 F0 B4 01             		movw	r8, #436
+  55 001c AD F0                   		movw	ax, r8
+  56 001e BD F2                   		movw	r10, ax
+  57 0020 EA F2                   		movw	de, r10
+  58 0022 30 FF 0A                		movw	ax, #2815
+  59 0025 B9                      		movw	[de], ax
+  56:../src/r_cg_timer.c ****           _0008_TAU_CH3_STOP_TRG_ON | _0010_TAU_CH4_STOP_TRG_ON | _0020_TAU_CH5_STOP_TRG_ON |
+  57:../src/r_cg_timer.c ****           _0040_TAU_CH6_STOP_TRG_ON | _0080_TAU_CH7_STOP_TRG_ON | _0200_TAU_CH1_H8_STOP_TRG_ON |
+  58:../src/r_cg_timer.c ****           _0800_TAU_CH3_H8_STOP_TRG_ON;
+  59:../src/r_cg_timer.c ****     /* Mask channel 0 interrupt */
+  60:../src/r_cg_timer.c ****     TMMK00 = 1U;    /* disable INTTM00 interrupt */
+  60                             		.loc 1 60 0
+  61 0026 C9 F0 E6 FF             		movw	r8, #-26
+  62 002a AD F0                   		movw	ax, r8
+  63 002c BD F4                   		movw	r12, ax
+  64 002e FA F4                   		movw	hl, r12
+  65 0030 71 C2                   		set1	[hl].4 ;insvmisalignqi [hl],#1,#4,#1 {0}
+  61:../src/r_cg_timer.c ****     TMIF00 = 0U;    /* clear INTTM00 interrupt flag */
+  66                             		.loc 1 61 0
+  67 0032 C9 F0 E2 FF             		movw	r8, #-30
+  68 0036 AD F0                   		movw	ax, r8
+  69 0038 BD F2                   		movw	r10, ax
+  70 003a FA F2                   		movw	hl, r10
+  71 003c 71 C3                   		clr1	[hl].4 ;insvmisalignqi [hl],#1,#4,#0 {0}
+  62:../src/r_cg_timer.c ****     /* Mask channel 1 interrupt */
+  63:../src/r_cg_timer.c ****     TMMK01 = 1U;    /* disable INTTM01 interrupt */
+  72                             		.loc 1 63 0
+  73 003e C9 F0 E6 FF             		movw	r8, #-26
+  74 0042 AD F0                   		movw	ax, r8
+  75 0044 BD F4                   		movw	r12, ax
+  76 0046 FA F4                   		movw	hl, r12
+  77 0048 71 D2                   		set1	[hl].5 ;insvmisalignqi [hl],#1,#5,#1 {0}
+  64:../src/r_cg_timer.c ****     TMIF01 = 0U;    /* clear INTTM01 interrupt flag */
+  78                             		.loc 1 64 0
+  79 004a C9 F0 E2 FF             		movw	r8, #-30
+  80 004e AD F0                   		movw	ax, r8
+  81 0050 BD F2                   		movw	r10, ax
+  82 0052 FA F2                   		movw	hl, r10
+  83 0054 71 D3                   		clr1	[hl].5 ;insvmisalignqi [hl],#1,#5,#0 {0}
+  65:../src/r_cg_timer.c ****     /* Mask channel 1 higher 8 bits interrupt */
+  66:../src/r_cg_timer.c ****     TMMK01H = 1U;    /* disable INTTM01H interrupt */
+  84                             		.loc 1 66 0
+  85 0056 C9 F0 E5 FF             		movw	r8, #-27
+  86 005a AD F0                   		movw	ax, r8
+  87 005c BD F4                   		movw	r12, ax
+  88 005e FA F4                   		movw	hl, r12
+  89 0060 71 F2                   		set1	[hl].7 ;insvmisalignqi [hl],#1,#7,#1 {0}
+  67:../src/r_cg_timer.c ****     TMIF01H = 0U;    /* clear INTTM01H interrupt flag */
+  90                             		.loc 1 67 0
+  91 0062 C9 F0 E1 FF             		movw	r8, #-31
+  92 0066 AD F0                   		movw	ax, r8
+  93 0068 BD F2                   		movw	r10, ax
+  94 006a FA F2                   		movw	hl, r10
+  95 006c 71 F3                   		clr1	[hl].7 ;insvmisalignqi [hl],#1,#7,#0 {0}
+  68:../src/r_cg_timer.c ****     /* Mask channel 2 interrupt */
+  69:../src/r_cg_timer.c ****     TMMK02 = 1U;    /* disable INTTM02 interrupt */
+  96                             		.loc 1 69 0
+  97 006e C9 F0 E6 FF             		movw	r8, #-26
+  98 0072 AD F0                   		movw	ax, r8
+  99 0074 BD F4                   		movw	r12, ax
+ 100 0076 FA F4                   		movw	hl, r12
+ 101 0078 71 E2                   		set1	[hl].6 ;insvmisalignqi [hl],#1,#6,#1 {0}
+  70:../src/r_cg_timer.c ****     TMIF02 = 0U;    /* clear INTTM02 interrupt flag */
+ 102                             		.loc 1 70 0
+ 103 007a C9 F0 E2 FF             		movw	r8, #-30
+ 104 007e AD F0                   		movw	ax, r8
+ 105 0080 BD F2                   		movw	r10, ax
+ 106 0082 FA F2                   		movw	hl, r10
+ 107 0084 71 E3                   		clr1	[hl].6 ;insvmisalignqi [hl],#1,#6,#0 {0}
+  71:../src/r_cg_timer.c ****     /* Mask channel 3 interrupt */
+  72:../src/r_cg_timer.c ****     TMMK03 = 1U;    /* disable INTTM03 interrupt */
+ 108                             		.loc 1 72 0
+ 109 0086 C9 F0 E6 FF             		movw	r8, #-26
+ 110 008a AD F0                   		movw	ax, r8
+ 111 008c BD F4                   		movw	r12, ax
+ 112 008e FA F4                   		movw	hl, r12
+ 113 0090 71 F2                   		set1	[hl].7 ;insvmisalignqi [hl],#1,#7,#1 {0}
+  73:../src/r_cg_timer.c ****     TMIF03 = 0U;    /* clear INTTM03 interrupt flag */
+ 114                             		.loc 1 73 0
+ 115 0092 C9 F0 E2 FF             		movw	r8, #-30
+ 116 0096 AD F0                   		movw	ax, r8
+ 117 0098 BD F2                   		movw	r10, ax
+ 118 009a FA F2                   		movw	hl, r10
+ 119 009c 71 F3                   		clr1	[hl].7 ;insvmisalignqi [hl],#1,#7,#0 {0}
+  74:../src/r_cg_timer.c ****     /* Mask channel 3 higher 8 bits interrupt */
+  75:../src/r_cg_timer.c ****     TMMK03H = 1U;    /* disable INTTM03H interrupt */
+ 120                             		.loc 1 75 0
+ 121 009e C9 F0 E6 FF             		movw	r8, #-26
+ 122 00a2 AD F0                   		movw	ax, r8
+ 123 00a4 BD F4                   		movw	r12, ax
+ 124 00a6 FA F4                   		movw	hl, r12
+ 125 00a8 71 A2                   		set1	[hl].2 ;insvmisalignqi [hl],#1,#2,#1 {0}
+  76:../src/r_cg_timer.c ****     TMIF03H = 0U;    /* clear INTTM03H interrupt flag */
+ 126                             		.loc 1 76 0
+ 127 00aa C9 F0 E2 FF             		movw	r8, #-30
+ 128 00ae AD F0                   		movw	ax, r8
+ 129 00b0 BD F2                   		movw	r10, ax
+ 130 00b2 FA F2                   		movw	hl, r10
+ 131 00b4 71 A3                   		clr1	[hl].2 ;insvmisalignqi [hl],#1,#2,#0 {0}
+  77:../src/r_cg_timer.c ****     /* Mask channel 4 interrupt */
+  78:../src/r_cg_timer.c ****     TMMK04 = 1U;    /* disable INTTM04 interrupt */
+ 132                             		.loc 1 78 0
+ 133 00b6 C9 F0 E7 FF             		movw	r8, #-25
+ 134 00ba AD F0                   		movw	ax, r8
+ 135 00bc BD F4                   		movw	r12, ax
+ 136 00be FA F4                   		movw	hl, r12
+ 137 00c0 71 F2                   		set1	[hl].7 ;insvmisalignqi [hl],#1,#7,#1 {0}
+  79:../src/r_cg_timer.c ****     TMIF04 = 0U;    /* clear INTTM04 interrupt flag */
+ 138                             		.loc 1 79 0
+ 139 00c2 C9 F0 E3 FF             		movw	r8, #-29
+ 140 00c6 AD F0                   		movw	ax, r8
+ 141 00c8 BD F2                   		movw	r10, ax
+ 142 00ca FA F2                   		movw	hl, r10
+ 143 00cc 71 F3                   		clr1	[hl].7 ;insvmisalignqi [hl],#1,#7,#0 {0}
+  80:../src/r_cg_timer.c ****     /* Mask channel 5 interrupt */
+  81:../src/r_cg_timer.c ****     TMMK05 = 1U;    /* disable INTTM05 interrupt */
+ 144                             		.loc 1 81 0
+ 145 00ce C9 F0 D4 FF             		movw	r8, #-44
+ 146 00d2 AD F0                   		movw	ax, r8
+ 147 00d4 BD F4                   		movw	r12, ax
+ 148 00d6 FA F4                   		movw	hl, r12
+ 149 00d8 71 82                   		set1	[hl].0 ;insvmisalignqi [hl],#1,#0,#1 {0}
+  82:../src/r_cg_timer.c ****     TMIF05 = 0U;    /* clear INTTM05 interrupt flag */
+ 150                             		.loc 1 82 0
+ 151 00da C9 F0 D0 FF             		movw	r8, #-48
+ 152 00de AD F0                   		movw	ax, r8
+ 153 00e0 BD F2                   		movw	r10, ax
+ 154 00e2 FA F2                   		movw	hl, r10
+ 155 00e4 71 83                   		clr1	[hl].0 ;insvmisalignqi [hl],#1,#0,#0 {0}
+  83:../src/r_cg_timer.c ****     /* Mask channel 6 interrupt */
+  84:../src/r_cg_timer.c ****     TMMK06 = 1U;    /* disable INTTM06 interrupt */
+ 156                             		.loc 1 84 0
+ 157 00e6 C9 F0 D4 FF             		movw	r8, #-44
+ 158 00ea AD F0                   		movw	ax, r8
+ 159 00ec BD F4                   		movw	r12, ax
+ 160 00ee FA F4                   		movw	hl, r12
+ 161 00f0 71 92                   		set1	[hl].1 ;insvmisalignqi [hl],#1,#1,#1 {0}
+  85:../src/r_cg_timer.c ****     TMIF06 = 0U;    /* clear INTTM06 interrupt flag */
+ 162                             		.loc 1 85 0
+ 163 00f2 C9 F0 D0 FF             		movw	r8, #-48
+ 164 00f6 AD F0                   		movw	ax, r8
+ 165 00f8 BD F2                   		movw	r10, ax
+ 166 00fa FA F2                   		movw	hl, r10
+ 167 00fc 71 93                   		clr1	[hl].1 ;insvmisalignqi [hl],#1,#1,#0 {0}
+  86:../src/r_cg_timer.c ****     /* Mask channel 7 interrupt */
+  87:../src/r_cg_timer.c ****     TMMK07 = 1U;    /* disable INTTM07 interrupt */
+ 168                             		.loc 1 87 0
+ 169 00fe C9 F0 D4 FF             		movw	r8, #-44
+ 170 0102 AD F0                   		movw	ax, r8
+ 171 0104 BD F4                   		movw	r12, ax
+ 172 0106 FA F4                   		movw	hl, r12
+ 173 0108 71 A2                   		set1	[hl].2 ;insvmisalignqi [hl],#1,#2,#1 {0}
+  88:../src/r_cg_timer.c ****     TMIF07 = 0U;    /* clear INTTM07 interrupt flag */
+ 174                             		.loc 1 88 0
+ 175 010a C9 F0 D0 FF             		movw	r8, #-48
+ 176 010e AD F0                   		movw	ax, r8
+ 177 0110 BD F2                   		movw	r10, ax
+ 178 0112 FA F2                   		movw	hl, r10
+ 179 0114 71 A3                   		clr1	[hl].2 ;insvmisalignqi [hl],#1,#2,#0 {0}
+  89:../src/r_cg_timer.c ****     /* Set INTTM00 low priority */
+  90:../src/r_cg_timer.c ****     TMPR100 = 1U;
+ 180                             		.loc 1 90 0
+ 181 0116 C9 F0 EE FF             		movw	r8, #-18
+ 182 011a AD F0                   		movw	ax, r8
+ 183 011c BD F4                   		movw	r12, ax
+ 184 011e FA F4                   		movw	hl, r12
+ 185 0120 71 C2                   		set1	[hl].4 ;insvmisalignqi [hl],#1,#4,#1 {0}
+  91:../src/r_cg_timer.c ****     TMPR000 = 1U;
+ 186                             		.loc 1 91 0
+ 187 0122 C9 F0 EA FF             		movw	r8, #-22
+ 188 0126 AD F0                   		movw	ax, r8
+ 189 0128 BD F2                   		movw	r10, ax
+ 190 012a FA F2                   		movw	hl, r10
+ 191 012c 71 C2                   		set1	[hl].4 ;insvmisalignqi [hl],#1,#4,#1 {0}
+  92:../src/r_cg_timer.c ****     /* Channel 0 used as interval timer */
+  93:../src/r_cg_timer.c ****     TMR00 = _0000_TAU_CLOCK_SELECT_CKM0 | _0000_TAU_CLOCK_MODE_CKS | _0000_TAU_COMBINATION_SLAVE |
+ 192                             		.loc 1 93 0
+ 193 012e C9 F0 90 01             		movw	r8, #400
+ 194 0132 AD F0                   		movw	ax, r8
+ 195 0134 BD F4                   		movw	r12, ax
+ 196 0136 EA F4                   		movw	de, r12
+ 197 0138 F6                      		clrw	ax
+ 198 0139 B9                      		movw	[de], ax
+  94:../src/r_cg_timer.c ****             _0000_TAU_TRIGGER_SOFTWARE | _0000_TAU_MODE_INTERVAL_TIMER | _0000_TAU_START_INT_UNUSED
+  95:../src/r_cg_timer.c ****     TDR00 = _7CFF_TAU_TDR00_VALUE;
+ 199                             		.loc 1 95 0
+ 200 013a C9 F0 18 FF             		movw	r8, #-232
+ 201 013e AD F0                   		movw	ax, r8
+ 202 0140 BD F2                   		movw	r10, ax
+ 203 0142 EA F2                   		movw	de, r10
+ 204 0144 30 FF 7C                		movw	ax, #31999
+ 205 0147 B9                      		movw	[de], ax
+  96:../src/r_cg_timer.c ****     TO0 &= ~_0001_TAU_CH0_OUTPUT_VALUE_1;
+ 206                             		.loc 1 96 0
+ 207 0148 C9 F2 B8 01             		movw	r10, #440
+ 208 014c C9 F0 B8 01             		movw	r8, #440
+ 209 0150 AD F0                   		movw	ax, r8
+ 210 0152 BD F4                   		movw	r12, ax
+ 211 0154 FA F4                   		movw	hl, r12
+ 212 0156 AB                      		movw	ax, [hl]
+ 213 0157 BD F0                   		movw	r8, ax
+ 214 0159 5A F0 FE                		and	r8, #254 ;andhi3 r8,r8,#-2
+ 215 015c AD F2                   		movw	ax, r10
+ 216 015e BD F4                   		movw	r12, ax
+ 217 0160 EA F4                   		movw	de, r12
+ 218 0162 AD F0                   		movw	ax, r8
+ 219 0164 B9                      		movw	[de], ax
+  97:../src/r_cg_timer.c ****     TOE0 &= ~_0001_TAU_CH0_OUTPUT_ENABLE;
+ 220                             		.loc 1 97 0
+ 221 0165 C9 F2 BA 01             		movw	r10, #442
+ 222 0169 C9 F0 BA 01             		movw	r8, #442
+ 223 016d AD F0                   		movw	ax, r8
+ 224 016f BD F4                   		movw	r12, ax
+ 225 0171 FA F4                   		movw	hl, r12
+ 226 0173 AB                      		movw	ax, [hl]
+ 227 0174 BD F0                   		movw	r8, ax
+ 228 0176 5A F0 FE                		and	r8, #254 ;andhi3 r8,r8,#-2
+ 229 0179 AD F2                   		movw	ax, r10
+ 230 017b BD F4                   		movw	r12, ax
+ 231 017d EA F4                   		movw	de, r12
+ 232 017f AD F0                   		movw	ax, r8
+ 233 0181 B9                      		movw	[de], ax
+  98:../src/r_cg_timer.c **** }
+ 234                             		.loc 1 98 0
+ 235 0182 D7                      		ret
+ 236                             	.LFE0:
+ 238                             		.global	_R_TAU0_Channel0_Start
+ 240                             	_R_TAU0_Channel0_Start:
+ 241                             	.LFB1:
+  99:../src/r_cg_timer.c **** 
+ 100:../src/r_cg_timer.c **** /**************************************************************************************************
+ 101:../src/r_cg_timer.c **** * Function Name: R_TAU0_Channel0_Start
+ 102:../src/r_cg_timer.c **** * Description  : This function starts TAU0 channel 0 counter.
+ 103:../src/r_cg_timer.c **** * Arguments    : None
+ 104:../src/r_cg_timer.c **** * Return Value : None
+ 105:../src/r_cg_timer.c **** ***************************************************************************************************
+ 106:../src/r_cg_timer.c **** void R_TAU0_Channel0_Start(void)
+ 107:../src/r_cg_timer.c **** {
+ 242                             		.loc 1 107 0
+ 108:../src/r_cg_timer.c ****     TMIF00 = 0U;    /* clear INTTM00 interrupt flag */
+ 243                             		.loc 1 108 0
+ 244 0183 C9 F0 E2 FF             		movw	r8, #-30
+ 245 0187 AD F0                   		movw	ax, r8
+ 246 0189 BD F2                   		movw	r10, ax
+ 247 018b FA F2                   		movw	hl, r10
+ 248 018d 71 C3                   		clr1	[hl].4 ;insvmisalignqi [hl],#1,#4,#0 {0}
+ 109:../src/r_cg_timer.c ****     TMMK00 = 0U;    /* enable INTTM00 interrupt */
+ 249                             		.loc 1 109 0
+ 250 018f C9 F0 E6 FF             		movw	r8, #-26
+ 251 0193 AD F0                   		movw	ax, r8
+ 252 0195 BD F4                   		movw	r12, ax
+ 253 0197 FA F4                   		movw	hl, r12
+ 254 0199 71 C3                   		clr1	[hl].4 ;insvmisalignqi [hl],#1,#4,#0 {0}
+ 110:../src/r_cg_timer.c ****     TS0 |= _0001_TAU_CH0_START_TRG_ON;
+ 255                             		.loc 1 110 0
+ 256 019b C9 F2 B2 01             		movw	r10, #434
+ 257 019f C9 F0 B2 01             		movw	r8, #434
+ 258 01a3 AD F0                   		movw	ax, r8
+ 259 01a5 BD F4                   		movw	r12, ax
+ 260 01a7 FA F4                   		movw	hl, r12
+ 261 01a9 AB                      		movw	ax, [hl]
+ 262 01aa BD F0                   		movw	r8, ax
+ 263 01ac 6A F0 01                		or	r8, #1 ;iorhi3 r8,r8,#1
+ 264 01af AD F2                   		movw	ax, r10
+ 265 01b1 BD F4                   		movw	r12, ax
+ 266 01b3 EA F4                   		movw	de, r12
+ 267 01b5 AD F0                   		movw	ax, r8
+ 268 01b7 B9                      		movw	[de], ax
+ 111:../src/r_cg_timer.c **** }
+ 269                             		.loc 1 111 0
+ 270 01b8 D7                      		ret
+ 271                             	.LFE1:
+ 273                             		.global	_R_TAU0_Channel0_Stop
+ 275                             	_R_TAU0_Channel0_Stop:
+ 276                             	.LFB2:
+ 112:../src/r_cg_timer.c **** 
+ 113:../src/r_cg_timer.c **** /**************************************************************************************************
+ 114:../src/r_cg_timer.c **** * Function Name: R_TAU0_Channel0_Stop
+ 115:../src/r_cg_timer.c **** * Description  : This function stops TAU0 channel 0 counter.
+ 116:../src/r_cg_timer.c **** * Arguments    : None
+ 117:../src/r_cg_timer.c **** * Return Value : None
+ 118:../src/r_cg_timer.c **** ***************************************************************************************************
+ 119:../src/r_cg_timer.c **** void R_TAU0_Channel0_Stop(void)
+ 120:../src/r_cg_timer.c **** {
+ 277                             		.loc 1 120 0
+ 121:../src/r_cg_timer.c ****     TT0 |= _0001_TAU_CH0_STOP_TRG_ON;
+ 278                             		.loc 1 121 0
+ 279 01b9 C9 F2 B4 01             		movw	r10, #436
+ 280 01bd C9 F0 B4 01             		movw	r8, #436
+ 281 01c1 AD F0                   		movw	ax, r8
+ 282 01c3 BD F4                   		movw	r12, ax
+ 283 01c5 FA F4                   		movw	hl, r12
+ 284 01c7 AB                      		movw	ax, [hl]
+ 285 01c8 BD F0                   		movw	r8, ax
+ 286 01ca 6A F0 01                		or	r8, #1 ;iorhi3 r8,r8,#1
+ 287 01cd AD F2                   		movw	ax, r10
+ 288 01cf BD F4                   		movw	r12, ax
+ 289 01d1 EA F4                   		movw	de, r12
+ 290 01d3 AD F0                   		movw	ax, r8
+ 291 01d5 B9                      		movw	[de], ax
+ 122:../src/r_cg_timer.c ****     /* Mask channel 0 interrupt */
+ 123:../src/r_cg_timer.c ****     TMMK00 = 1U;    /* disable INTTM00 interrupt */
+ 292                             		.loc 1 123 0
+ 293 01d6 C9 F0 E6 FF             		movw	r8, #-26
+ 294 01da AD F0                   		movw	ax, r8
+ 295 01dc BD F2                   		movw	r10, ax
+ 296 01de FA F2                   		movw	hl, r10
+ 297 01e0 71 C2                   		set1	[hl].4 ;insvmisalignqi [hl],#1,#4,#1 {0}
+ 124:../src/r_cg_timer.c ****     TMIF00 = 0U;    /* clear INTTM00 interrupt flag */
+ 298                             		.loc 1 124 0
+ 299 01e2 C9 F0 E2 FF             		movw	r8, #-30
+ 300 01e6 AD F0                   		movw	ax, r8
+ 301 01e8 BD F4                   		movw	r12, ax
+ 302 01ea FA F4                   		movw	hl, r12
+ 303 01ec 71 C3                   		clr1	[hl].4 ;insvmisalignqi [hl],#1,#4,#0 {0}
+ 125:../src/r_cg_timer.c **** }
+ 304                             		.loc 1 125 0
+ 305 01ee D7                      		ret
+ 306                             	.LFE2:
+ 350                             	.Letext0:
+ 351                             		.file 2 "../src/iodefine.h"
+ 352                             		.file 3 "../src/iodefine_ext.h"
